@@ -284,13 +284,20 @@
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w25-cf-akb">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fGX-uH-hek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5P1-6w-c7P"/>
+                            <constraint firstAttribute="bottom" secondItem="w25-cf-akb" secondAttribute="bottom" id="7vm-UG-9p8"/>
+                            <constraint firstItem="w25-cf-akb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8qw-BX-szS"/>
+                            <constraint firstItem="w25-cf-akb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="97A-Vo-Otp"/>
                             <constraint firstAttribute="bottom" secondItem="7dg-Dk-pxj" secondAttribute="bottom" id="99h-is-uyO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fGX-uH-hek" secondAttribute="trailing" constant="20" id="BeZ-BK-hKZ"/>
+                            <constraint firstItem="w25-cf-akb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DgE-64-99z"/>
                             <constraint firstItem="VIV-9f-s2H" firstAttribute="height" secondItem="7dg-Dk-pxj" secondAttribute="height" multiplier="0.101931" id="Khg-Hw-MKR"/>
                             <constraint firstItem="fGX-uH-hek" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Trw-uw-fMo"/>
                             <constraint firstItem="7dg-Dk-pxj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="USa-F4-mcA"/>
@@ -308,12 +315,13 @@
                         <outlet property="buttonback" destination="poU-2W-ede" id="w7f-yq-be0"/>
                         <outlet property="errorMessageLabel" destination="ZXW-fg-A9q" id="3V2-QP-6oY"/>
                         <outlet property="passWordTextField" destination="TMm-0c-FjJ" id="qXN-kW-5GN"/>
+                        <outlet property="snow" destination="w25-cf-akb" id="zEv-Nf-nYT"/>
                         <outlet property="userNameTextField" destination="erI-Eg-8S2" id="oTM-5P-L7t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-694" y="46"/>
+            <point key="canvasLocation" x="-694.88372093023258" y="45.708154506437772"/>
         </scene>
         <!--Loginup View Controller-->
         <scene sceneID="PiU-Fc-jnL">
@@ -333,6 +341,9 @@
                                         <rect key="frame" x="8" y="8" width="75" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="backbtn"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="xhO-4J-xGo" eventType="touchDown" id="8CX-Ci-cSw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -781,6 +792,7 @@
                     <connections>
                         <outlet property="AgainSHowPass" destination="4WY-tI-A03" id="251-BN-Pbc"/>
                         <outlet property="avatarImage" destination="raf-Ws-ixV" id="dy3-yn-0SG"/>
+                        <outlet property="backk" destination="kmh-dv-XBz" id="1it-YI-zie"/>
                         <outlet property="confirmPasswordTextField" destination="cfR-dY-8FZ" id="KUx-EZ-IQR"/>
                         <outlet property="emailTextField" destination="jHr-6m-9bG" id="JV3-XJ-Dgn"/>
                         <outlet property="errorConfirmPass" destination="P1u-gU-tC4" id="a7d-6R-yml"/>

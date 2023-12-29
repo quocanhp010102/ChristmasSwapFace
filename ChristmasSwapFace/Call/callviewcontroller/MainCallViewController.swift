@@ -8,7 +8,7 @@
 import UIKit
 
 class MainCallViewController: UIViewController {
-   
+    @IBOutlet weak var snow: UIImageView!
     @IBAction func ButtonSwapfaceAC(){
         
 //        let vc = UIViewController()
@@ -35,7 +35,7 @@ class MainCallViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        snow.loadGif(name: "snoww")
         // Do any additional setup after loading the view.
     }
     

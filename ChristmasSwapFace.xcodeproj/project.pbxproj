@@ -18,16 +18,6 @@
 		E619FA792B3C2B3A0058321F /* AdmobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FA782B3C2B3A0058321F /* AdmobManager.swift */; };
 		E619FA7B2B3C2B4F0058321F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FA7A2B3C2B4F0058321F /* Extensions.swift */; };
 		E619FA7D2B3C2B600058321F /* ProConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FA7C2B3C2B600058321F /* ProConfigure.swift */; };
-		E619FA892B3C2BCC0058321F /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA7F2B3C2BCC0058321F /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 */; };
-		E619FA8A2B3C2BCC0058321F /* BACKGROUND NOEL FREE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA802B3C2BCC0058321F /* BACKGROUND NOEL FREE.mp3 */; };
-		E619FA8B2B3C2BCC0058321F /* nhacChuong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA812B3C2BCC0058321F /* nhacChuong.mp3 */; };
-		E619FA8C2B3C2BCC0058321F /* british_dontfight_brothersister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E619FA822B3C2BCC0058321F /* british_dontfight_brothersister.m4a */; };
-		E619FA8D2B3C2BCC0058321F /* ringring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA832B3C2BCC0058321F /* ringring.mp3 */; };
-		E619FA8E2B3C2BCC0058321F /* british_dontfight_brother.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E619FA842B3C2BCC0058321F /* british_dontfight_brother.m4a */; };
-		E619FA8F2B3C2BCC0058321F /* santaAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA852B3C2BCC0058321F /* santaAudio.mp3 */; };
-		E619FA902B3C2BCC0058321F /* british_dontfight_sister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E619FA862B3C2BCC0058321F /* british_dontfight_sister.m4a */; };
-		E619FA912B3C2BCC0058321F /* british_dontfight_sister.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA872B3C2BCC0058321F /* british_dontfight_sister.mp3 */; };
-		E619FA922B3C2BCC0058321F /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E619FA882B3C2BCC0058321F /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 */; };
 		E619FA952B3C2C030058321F /* Eliza.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FA942B3C2C030058321F /* Eliza.swift */; };
 		E619FA972B3C2C2A0058321F /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FA962B3C2C2A0058321F /* ChatModel.swift */; };
 		E619FA9A2B3C2DEE0058321F /* santa.gif in Resources */ = {isa = PBXBuildFile; fileRef = E619FA992B3C2DEE0058321F /* santa.gif */; };
@@ -45,6 +35,17 @@
 		E619FAB52B3C2F1D0058321F /* Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FAB42B3C2F1D0058321F /* Ext.swift */; };
 		E619FAB72B3C30870058321F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619FAB62B3C30870058321F /* ChatViewController.swift */; };
 		E66032982B3D2E8D00766F16 /* VideoCallViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66032972B3D2E8D00766F16 /* VideoCallViewController2.swift */; };
+		E66032B72B3D385E00766F16 /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032AD2B3D385D00766F16 /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 */; };
+		E66032B82B3D385E00766F16 /* BACKGROUND NOEL FREE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032AE2B3D385D00766F16 /* BACKGROUND NOEL FREE.mp3 */; };
+		E66032B92B3D385E00766F16 /* british_dontfight_brothersister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E66032AF2B3D385D00766F16 /* british_dontfight_brothersister.m4a */; };
+		E66032BA2B3D385E00766F16 /* british_dontfight_sister.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032B02B3D385D00766F16 /* british_dontfight_sister.mp3 */; };
+		E66032BB2B3D385E00766F16 /* ringring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032B12B3D385E00766F16 /* ringring.mp3 */; };
+		E66032BC2B3D385E00766F16 /* british_dontfight_sister.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E66032B22B3D385E00766F16 /* british_dontfight_sister.m4a */; };
+		E66032BD2B3D385E00766F16 /* british_dontfight_brother.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E66032B32B3D385E00766F16 /* british_dontfight_brother.m4a */; };
+		E66032BE2B3D385E00766F16 /* santaAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032B42B3D385E00766F16 /* santaAudio.mp3 */; };
+		E66032BF2B3D385E00766F16 /* nhacChuong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032B52B3D385E00766F16 /* nhacChuong.mp3 */; };
+		E66032C02B3D385E00766F16 /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032B62B3D385E00766F16 /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 */; };
+		E66032C42B3D5ACE00766F16 /* nhacxuan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66032C32B3D5ACE00766F16 /* nhacxuan.mp3 */; };
 		E6B2BF422B341544009057D2 /* LoginupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2BF412B341544009057D2 /* LoginupViewController.swift */; };
 		E6B2BF442B341C01009057D2 /* MainForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2BF432B341C01009057D2 /* MainForgetViewController.swift */; };
 		E6B2BF462B341C22009057D2 /* ConfigdForgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2BF452B341C22009057D2 /* ConfigdForgetViewController.swift */; };
@@ -73,6 +74,9 @@
 		E6B58AE72B39778800FD2DB0 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B58AE52B39778800FD2DB0 /* VideoCollectionViewCell.swift */; };
 		E6B58AE82B39778800FD2DB0 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B58AE62B39778800FD2DB0 /* VideoCollectionViewCell.xib */; };
 		E6B58AEB2B39812300FD2DB0 /* ListVideoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B58AEA2B39812300FD2DB0 /* ListVideoModal.swift */; };
+		E6BC8A4F2B3EB3A6001A456B /* MainSwapface2testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC8A4E2B3EB3A6001A456B /* MainSwapface2testViewController.swift */; };
+		E6BC8A522B3EB40A001A456B /* getlistimageclvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC8A502B3EB40A001A456B /* getlistimageclvCell.swift */; };
+		E6BC8A532B3EB40A001A456B /* getlistimageclvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BC8A512B3EB40A001A456B /* getlistimageclvCell.xib */; };
 		E6CFFBD42B353D8200684331 /* SantalCall4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CFFBD32B353D8200684331 /* SantalCall4ViewController.swift */; };
 		E6CFFBD62B353F2E00684331 /* SantaCallVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CFFBD52B353F2E00684331 /* SantaCallVideoViewController.swift */; };
 		E6CFFBDB2B3542B700684331 /* StoryBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CFFBDA2B3542B700684331 /* StoryBar.storyboard */; };
@@ -109,16 +113,6 @@
 		E619FA782B3C2B3A0058321F /* AdmobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobManager.swift; sourceTree = "<group>"; };
 		E619FA7A2B3C2B4F0058321F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E619FA7C2B3C2B600058321F /* ProConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProConfigure.swift; sourceTree = "<group>"; };
-		E619FA7F2B3C2BCC0058321F /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3"; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3"; sourceTree = "<group>"; };
-		E619FA802B3C2BCC0058321F /* BACKGROUND NOEL FREE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "BACKGROUND NOEL FREE.mp3"; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/BACKGROUND NOEL FREE.mp3"; sourceTree = "<group>"; };
-		E619FA812B3C2BCC0058321F /* nhacChuong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = nhacChuong.mp3; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/nhacChuong.mp3"; sourceTree = "<group>"; };
-		E619FA822B3C2BCC0058321F /* british_dontfight_brothersister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = british_dontfight_brothersister.m4a; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/british_dontfight_brothersister.m4a"; sourceTree = "<group>"; };
-		E619FA832B3C2BCC0058321F /* ringring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ringring.mp3; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/ringring.mp3"; sourceTree = "<group>"; };
-		E619FA842B3C2BCC0058321F /* british_dontfight_brother.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = british_dontfight_brother.m4a; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/british_dontfight_brother.m4a"; sourceTree = "<group>"; };
-		E619FA852B3C2BCC0058321F /* santaAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = santaAudio.mp3; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/santaAudio.mp3"; sourceTree = "<group>"; };
-		E619FA862B3C2BCC0058321F /* british_dontfight_sister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = british_dontfight_sister.m4a; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/british_dontfight_sister.m4a"; sourceTree = "<group>"; };
-		E619FA872B3C2BCC0058321F /* british_dontfight_sister.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = british_dontfight_sister.mp3; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/british_dontfight_sister.mp3"; sourceTree = "<group>"; };
-		E619FA882B3C2BCC0058321F /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Somewhere in my memory - John Williams (Home alone soundtrack).mp3"; path = "../../../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/Sound/Somewhere in my memory - John Williams (Home alone soundtrack).mp3"; sourceTree = "<group>"; };
 		E619FA942B3C2C030058321F /* Eliza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eliza.swift; sourceTree = "<group>"; };
 		E619FA962B3C2C2A0058321F /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		E619FA992B3C2DEE0058321F /* santa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = santa.gif; path = "../../../../Downloads/lanntt2022-santa-calls-video-chatbot-c7491c98438f/SantaCallingApp/santa.gif"; sourceTree = "<group>"; };
@@ -136,6 +130,17 @@
 		E619FAB42B3C2F1D0058321F /* Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.swift; sourceTree = "<group>"; };
 		E619FAB62B3C30870058321F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E66032972B3D2E8D00766F16 /* VideoCallViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController2.swift; sourceTree = "<group>"; };
+		E66032AD2B3D385D00766F16 /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Somewhere in my memory - John Williams (Home alone soundtrack).mp3"; sourceTree = "<group>"; };
+		E66032AE2B3D385D00766F16 /* BACKGROUND NOEL FREE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "BACKGROUND NOEL FREE.mp3"; sourceTree = "<group>"; };
+		E66032AF2B3D385D00766F16 /* british_dontfight_brothersister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_dontfight_brothersister.m4a; sourceTree = "<group>"; };
+		E66032B02B3D385D00766F16 /* british_dontfight_sister.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = british_dontfight_sister.mp3; sourceTree = "<group>"; };
+		E66032B12B3D385E00766F16 /* ringring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringring.mp3; sourceTree = "<group>"; };
+		E66032B22B3D385E00766F16 /* british_dontfight_sister.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_dontfight_sister.m4a; sourceTree = "<group>"; };
+		E66032B32B3D385E00766F16 /* british_dontfight_brother.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_dontfight_brother.m4a; sourceTree = "<group>"; };
+		E66032B42B3D385E00766F16 /* santaAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = santaAudio.mp3; sourceTree = "<group>"; };
+		E66032B52B3D385E00766F16 /* nhacChuong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nhacChuong.mp3; sourceTree = "<group>"; };
+		E66032B62B3D385E00766F16 /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3"; sourceTree = "<group>"; };
+		E66032C32B3D5ACE00766F16 /* nhacxuan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nhacxuan.mp3; sourceTree = "<group>"; };
 		E6B2BF412B341544009057D2 /* LoginupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginupViewController.swift; sourceTree = "<group>"; };
 		E6B2BF432B341C01009057D2 /* MainForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainForgetViewController.swift; sourceTree = "<group>"; };
 		E6B2BF452B341C22009057D2 /* ConfigdForgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigdForgetViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +169,9 @@
 		E6B58AE52B39778800FD2DB0 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E6B58AE62B39778800FD2DB0 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		E6B58AEA2B39812300FD2DB0 /* ListVideoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoModal.swift; sourceTree = "<group>"; };
+		E6BC8A4E2B3EB3A6001A456B /* MainSwapface2testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSwapface2testViewController.swift; sourceTree = "<group>"; };
+		E6BC8A502B3EB40A001A456B /* getlistimageclvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getlistimageclvCell.swift; sourceTree = "<group>"; };
+		E6BC8A512B3EB40A001A456B /* getlistimageclvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = getlistimageclvCell.xib; sourceTree = "<group>"; };
 		E6CFFBD32B353D8200684331 /* SantalCall4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantalCall4ViewController.swift; sourceTree = "<group>"; };
 		E6CFFBD52B353F2E00684331 /* SantaCallVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaCallVideoViewController.swift; sourceTree = "<group>"; };
 		E6CFFBDA2B3542B700684331 /* StoryBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryBar.storyboard; sourceTree = "<group>"; };
@@ -233,12 +241,11 @@
 		E617DD492B38862300CBA1E3 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				E66032C22B3D591900766F16 /* Chat */,
+				E66032C12B3D590700766F16 /* User */,
+				E6F78EC52B3AB43A00C08F5E /* Register */,
 				E6F78ECE2B3AC86A00C08F5E /* Home */,
 				E6B58AE92B39810300FD2DB0 /* ListVideo */,
-				E617DD4A2B38864300CBA1E3 /* UserModal.swift */,
-				E6B58ABF2B392AAE00FD2DB0 /* UserAPI.swift */,
-				E6B58AC92B39369000FD2DB0 /* UserServiceConfiguration.swift */,
-				E619FA962B3C2C2A0058321F /* ChatModel.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -270,16 +277,17 @@
 		E619FA7E2B3C2B9C0058321F /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				E619FA802B3C2BCC0058321F /* BACKGROUND NOEL FREE.mp3 */,
-				E619FA842B3C2BCC0058321F /* british_dontfight_brother.m4a */,
-				E619FA822B3C2BCC0058321F /* british_dontfight_brothersister.m4a */,
-				E619FA862B3C2BCC0058321F /* british_dontfight_sister.m4a */,
-				E619FA872B3C2BCC0058321F /* british_dontfight_sister.mp3 */,
-				E619FA7F2B3C2BCC0058321F /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 */,
-				E619FA812B3C2BCC0058321F /* nhacChuong.mp3 */,
-				E619FA832B3C2BCC0058321F /* ringring.mp3 */,
-				E619FA852B3C2BCC0058321F /* santaAudio.mp3 */,
-				E619FA882B3C2BCC0058321F /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 */,
+				E66032C32B3D5ACE00766F16 /* nhacxuan.mp3 */,
+				E66032AE2B3D385D00766F16 /* BACKGROUND NOEL FREE.mp3 */,
+				E66032B32B3D385E00766F16 /* british_dontfight_brother.m4a */,
+				E66032AF2B3D385D00766F16 /* british_dontfight_brothersister.m4a */,
+				E66032B22B3D385E00766F16 /* british_dontfight_sister.m4a */,
+				E66032B02B3D385D00766F16 /* british_dontfight_sister.mp3 */,
+				E66032B62B3D385E00766F16 /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 */,
+				E66032B52B3D385E00766F16 /* nhacChuong.mp3 */,
+				E66032B12B3D385E00766F16 /* ringring.mp3 */,
+				E66032B42B3D385E00766F16 /* santaAudio.mp3 */,
+				E66032AD2B3D385D00766F16 /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -326,6 +334,24 @@
 				E619FAB42B3C2F1D0058321F /* Ext.swift */,
 			);
 			path = Ext;
+			sourceTree = "<group>";
+		};
+		E66032C12B3D590700766F16 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E617DD4A2B38864300CBA1E3 /* UserModal.swift */,
+				E6B58ABF2B392AAE00FD2DB0 /* UserAPI.swift */,
+				E6B58AC92B39369000FD2DB0 /* UserServiceConfiguration.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E66032C22B3D591900766F16 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E619FA962B3C2C2A0058321F /* ChatModel.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		E6B2BF492B343B46009057D2 /* Call */ = {
@@ -400,6 +426,16 @@
 			path = ListVideo;
 			sourceTree = "<group>";
 		};
+		E6BC8A4D2B3EB392001A456B /* getlistvideo */ = {
+			isa = PBXGroup;
+			children = (
+				E6BC8A4E2B3EB3A6001A456B /* MainSwapface2testViewController.swift */,
+				E6BC8A502B3EB40A001A456B /* getlistimageclvCell.swift */,
+				E6BC8A512B3EB40A001A456B /* getlistimageclvCell.xib */,
+			);
+			path = getlistvideo;
+			sourceTree = "<group>";
+		};
 		E6CFFBD92B3542A100684331 /* Story */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +467,7 @@
 		E6E63B672B32D06F0001C824 /* ChristmasSwapFace */ = {
 			isa = PBXGroup;
 			children = (
-				E6F78EC52B3AB43A00C08F5E /* Register */,
+				E6BC8A4D2B3EB392001A456B /* getlistvideo */,
 				E6B58AD52B3958C900FD2DB0 /* Common */,
 				E6B58AC62B39340300FD2DB0 /* Extension */,
 				E617DD492B38862300CBA1E3 /* Modal */,
@@ -557,33 +593,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				E619FAB22B3C2EE70058321F /* SantaChatTBV.xib in Resources */,
+				E66032B92B3D385E00766F16 /* british_dontfight_brothersister.m4a in Resources */,
+				E66032BD2B3D385E00766F16 /* british_dontfight_brother.m4a in Resources */,
 				E619FAB12B3C2EE70058321F /* CellCon.xib in Resources */,
 				E619FAA12B3C2E550058321F /* snoww.gif in Resources */,
-				E619FA8B2B3C2BCC0058321F /* nhacChuong.mp3 in Resources */,
-				E619FA8C2B3C2BCC0058321F /* british_dontfight_brothersister.m4a in Resources */,
-				E619FA912B3C2BCC0058321F /* british_dontfight_sister.mp3 in Resources */,
 				E6B58AE82B39778800FD2DB0 /* VideoCollectionViewCell.xib in Resources */,
+				E66032BF2B3D385E00766F16 /* nhacChuong.mp3 in Resources */,
 				E619FA9C2B3C2DF90058321F /* santa2.gif in Resources */,
-				E619FA8A2B3C2BCC0058321F /* BACKGROUND NOEL FREE.mp3 in Resources */,
+				E6BC8A532B3EB40A001A456B /* getlistimageclvCell.xib in Resources */,
 				E619FA702B3C2AC90058321F /* noel.mp4 in Resources */,
 				E6B2BF4B2B343B5C009057D2 /* CallStabord.storyboard in Resources */,
-				E619FA8E2B3C2BCC0058321F /* british_dontfight_brother.m4a in Resources */,
-				E619FA8F2B3C2BCC0058321F /* santaAudio.mp3 in Resources */,
+				E66032BC2B3D385E00766F16 /* british_dontfight_sister.m4a in Resources */,
 				E619FA742B3C2AC90058321F /* santaclaus.mp4 in Resources */,
 				E6CFFBDB2B3542B700684331 /* StoryBar.storyboard in Resources */,
 				E6E63B752B32D0720001C824 /* LaunchScreen.storyboard in Resources */,
-				E619FA892B3C2BCC0058321F /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 in Resources */,
-				E619FA8D2B3C2BCC0058321F /* ringring.mp3 in Resources */,
 				E619FA722B3C2AC90058321F /* hotsanta.mp4 in Resources */,
-				E619FA922B3C2BCC0058321F /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 in Resources */,
+				E66032BA2B3D385E00766F16 /* british_dontfight_sister.mp3 in Resources */,
 				E619FA732B3C2AC90058321F /* original.mp4 in Resources */,
+				E66032B72B3D385E00766F16 /* Somewhere in my memory - John Williams (Home alone soundtrack).mp3 in Resources */,
 				E6E63B722B32D0720001C824 /* Assets.xcassets in Resources */,
-				E619FA902B3C2BCC0058321F /* british_dontfight_sister.m4a in Resources */,
+				E66032B82B3D385E00766F16 /* BACKGROUND NOEL FREE.mp3 in Resources */,
+				E66032C42B3D5ACE00766F16 /* nhacxuan.mp3 in Resources */,
 				E6E63B702B32D06F0001C824 /* Main.storyboard in Resources */,
 				E619FA9A2B3C2DEE0058321F /* santa.gif in Resources */,
 				E619FA712B3C2AC90058321F /* santahalloween.mp4 in Resources */,
 				E619FAB02B3C2EE70058321F /* YouChatTBV.xib in Resources */,
 				E619FA9F2B3C2E290058321F /* santa.mp4 in Resources */,
+				E66032BB2B3D385E00766F16 /* ringring.mp3 in Resources */,
+				E66032C02B3D385E00766F16 /* Ikson - Christmas (No Copyright Christmas Music Instrumental).mp3 in Resources */,
+				E66032BE2B3D385E00766F16 /* santaAudio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +708,7 @@
 				E6F78EC72B3AB45300C08F5E /* RegisterAPI.swift in Sources */,
 				E6B2BF442B341C01009057D2 /* MainForgetViewController.swift in Sources */,
 				E617DD4B2B38864300CBA1E3 /* UserModal.swift in Sources */,
+				E6BC8A4F2B3EB3A6001A456B /* MainSwapface2testViewController.swift in Sources */,
 				E619FAAD2B3C2EE70058321F /* SantaChatTBV.swift in Sources */,
 				E6B2BF422B341544009057D2 /* LoginupViewController.swift in Sources */,
 				E6CFFBD62B353F2E00684331 /* SantaCallVideoViewController.swift in Sources */,
@@ -677,6 +716,7 @@
 				E6F78ED02B3AC88000C08F5E /* HomeAPI.swift in Sources */,
 				E619FAAE2B3C2EE70058321F /* YouChatTBV.swift in Sources */,
 				E6F78ECD2B3AC74800C08F5E /* NSMutableAttributedString.swift in Sources */,
+				E6BC8A522B3EB40A001A456B /* getlistimageclvCell.swift in Sources */,
 				E6CFFBDD2B3542CE00684331 /* StoryListViewController.swift in Sources */,
 				E6B58AE12B395DAF00FD2DB0 /* UIColor+Extension.swift in Sources */,
 				E6B58AC52B3931F800FD2DB0 /* ConfigurationBase.swift in Sources */,

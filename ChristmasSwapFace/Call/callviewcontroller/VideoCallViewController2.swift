@@ -59,10 +59,11 @@ class VideoCallViewController2: UIViewController {
         avPlayerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2)
         avPlayer.play()
         showCameraVC()
-        AdmobManager.shared.logEvent()
-        DispatchQueue.main.async {
-            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
-        }
+//        quangcao
+//        AdmobManager.shared.logEvent()
+//        DispatchQueue.main.async {
+//            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
+//        }
         
     }
     

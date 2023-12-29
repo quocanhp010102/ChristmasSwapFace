@@ -59,6 +59,7 @@ class SantaCallVideoViewController: UIViewController {
        }
     override func viewDidLoad() {
         super.viewDidLoad()
+        backBtn.setTitle("", for: .normal)
 //        snow.loadGif(name: "snoww")
         santagif.loadGif(name: "santa")
         santagif.layer.borderWidth = 1
@@ -71,10 +72,10 @@ class SantaCallVideoViewController: UIViewController {
         print(UIScreen.main.bounds.size.height)
         santagif.clipsToBounds = true
         cntLable.isHidden = true
-        AdmobManager.shared.logEvent()
-        DispatchQueue.main.async {
-            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
-        }
+//        AdmobManager.shared.logEvent()
+//        DispatchQueue.main.async {
+//            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
+//        }
     }
 
 }

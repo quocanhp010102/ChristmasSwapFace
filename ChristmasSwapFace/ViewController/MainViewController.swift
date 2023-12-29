@@ -8,7 +8,13 @@
 import UIKit
 import SwiftKeychainWrapper
 import Toast_Swift
+import AVFoundation
+import AppTrackingTransparency
+
 class MainViewController: BaseViewController {
+    var player: AVAudioPlayer?
+    var player2: AVAudioPlayer?
+    @IBOutlet weak var snow: UIImageView!
     @IBOutlet weak var buttonback:UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -28,7 +34,7 @@ class MainViewController: BaseViewController {
 //        }
 //    }
     @IBAction func buttonback2(){
-        
+        player?.stop()
 //        let vc = UIViewController()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginupViewController") as! LoginupViewController
@@ -52,6 +58,8 @@ class MainViewController: BaseViewController {
     }
     
     @IBAction func buttonback3MainCall(){
+        player?.stop()
+        playSound2()
 ////        let vc = UIViewController()
 //        let storyboard = UIStoryboard(name: "CallStabord", bundle: nil)
 //        let vc = storyboard.instantiateViewController(withIdentifier: "MainCallViewController")
@@ -115,11 +123,37 @@ class MainViewController: BaseViewController {
     }
     
 
-        
-    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "BACKGROUND NOEL FREE", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+            
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    func playSound2() {
+        guard let url = Bundle.main.url(forResource: "nhacxuan", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player2 = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player2 else { return }
+            
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound()
+        snow.loadGif(name: "snoww")
         // Do any additional setup after loading the view.
         buttonback.setTitle("", for: .normal)
        

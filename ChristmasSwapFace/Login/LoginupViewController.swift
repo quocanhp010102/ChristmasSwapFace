@@ -33,6 +33,10 @@ class LoginupViewController: UIViewController {
     @IBOutlet weak var errorEmail: UIView!
     @IBOutlet weak var errorPassword: UIView!
     @IBOutlet weak var errorConfirmPass: UIView!
+    @IBOutlet weak var backk: UIButton!
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     var isError = 0
     
     func animateButton() {
@@ -59,6 +63,7 @@ class LoginupViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        backk.setTitle("", for: .normal)
         self.navigationController?.isNavigationBarHidden = true
         hideKeyboardWhenTappedAround()
         settingAttrLabel()

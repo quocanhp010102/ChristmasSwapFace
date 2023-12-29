@@ -39,6 +39,7 @@ class ChatViewController: UIViewController {
     var chatSanta = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        sendButton.setTitle("", for: .normal)
         backBtn.setTitle("", for: .normal)
         self.setupToHideKeyboardOnTapOnView()
         snow.loadGif(name: "snoww")
@@ -67,10 +68,12 @@ class ChatViewController: UIViewController {
         contentChatSanta.content = chatSanta
         dataChat.append(contentChatSanta)
         chatTBV.reloadData()
-        AdmobManager.shared.logEvent()
-        DispatchQueue.main.async {
-            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
-        }
+        
+//        quangcao
+//        AdmobManager.shared.logEvent()
+//        DispatchQueue.main.async {
+//            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
+//        }
     }
     @IBAction func back(){
         let storyboard = UIStoryboard(name: "CallStabord", bundle: nil)

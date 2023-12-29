@@ -21,7 +21,7 @@ class SanTacall2ViewController: UIViewController {
     var player: AVAudioPlayer?
     @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var callBtn: UIButton!
-    
+    @IBOutlet weak var backBTN:UIButton!
     @IBOutlet weak var videoBtn: UIButton!
     
     @IBOutlet weak var hangtram: UILabel!
@@ -42,10 +42,25 @@ class SanTacall2ViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
+    @IBAction func back(){
+        //player2?.stop()
+        player?.stop()
+        let storyboard = UIStoryboard(name: "CallStabord", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainCallViewController")
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
+    }
     @IBAction func chat(){
         player?.stop()
         let storyboard = UIStoryboard(name: "CallStabord", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
+    }
+    @IBAction func listImage(){
+        //player?.stop()
+        let storyboard = UIStoryboard(name: "CallStabord", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainSwapface2testViewController")
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
@@ -64,6 +79,7 @@ class SanTacall2ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        backBTN.setTitle("", for: .normal)
         // Do any additional setup after loading the view.
 //        gifView.loadGif(name: "santa")
 //        snow.loadGif(name: "snoww")
@@ -95,19 +111,21 @@ class SanTacall2ViewController: UIViewController {
 //        n = n % 10
 //        hangdv.text = String(n )
 //        AdmobManager.shared.fullRootViewController = self
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                                                            AdmobManager.shared.createAndLoadInterstitial()
-                                                            AdmobManager.shared.logEvent()
-            DispatchQueue.main.async {
-                 self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
-                                                            }            })
-        } else {
-            AdmobManager.shared.createAndLoadInterstitial()
-            AdmobManager.shared.logEvent()
-            DispatchQueue.main.async {
-                self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
-            }        }
+        
+      //  quang cao
+//        if #available(iOS 14, *) {
+//            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+//                                                            AdmobManager.shared.createAndLoadInterstitial()
+//                                                            AdmobManager.shared.logEvent()
+//            DispatchQueue.main.async {
+//                 self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
+//                                                            }            })
+//        } else {
+//            AdmobManager.shared.createAndLoadInterstitial()
+//            AdmobManager.shared.logEvent()
+//            DispatchQueue.main.async {
+//                self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
+//            }        }
     }
 }
 extension UIView {

@@ -685,8 +685,29 @@ class APIService:NSObject {
             }
             closure(nil, nil)
         }
-    func GetMangaAll(closure: @escaping (_ response: [ListVideoModal]?, _ error: Error?) -> Void) {
-        requestSON("https://api.mangasocial.online/get/list_image/1?album=2", param: nil, method: .GET, loading: true) { (data, error) in
+//    func listAllVideoSwaped2(page:Int,closure: @escaping (_ response: [ListVideoModal], _ error: Error?) -> Void) {
+//        requestSON("https://api.mangasocial.online/get/list_image/1?album="+albuum, param: nil, method: .GET, loading: true) { (data, error) in
+//            if let d = data as? [String: Any] {
+//                var listComicReturn:[ListVideoModal] = [ListVideoModal]()
+//                if let slideshows = d["list_sukien_video"] as? [[String : Any]] {
+//                    for item1 in slideshows{
+//                       
+//                                var commicAdd:ListVideoModal = ListVideoModal()
+//                                commicAdd = commicAdd.initLoad(item1)
+//                                listComicReturn.append(commicAdd)
+//                            
+//                        
+//                    }
+//                }
+//                closure(listComicReturn, nil)
+//            }else {
+//                closure(nil, error)
+//            }
+//        }
+//        // closure("Please Wait To Remove", nil)
+//    }
+    func GetMangaAll(albuum:String,closure: @escaping (_ response: [ListVideoModal]?, _ error: Error?) -> Void) {
+        requestSON("https://api.mangasocial.online/get/list_image/1?album="+albuum, param: nil, method: .GET, loading: true) { (data, error) in
             if let d = data as? [String: Any] {
                 var listComicReturn:[ListVideoModal] = [ListVideoModal]()
                 if let slideshows = d["list_sukien_video"] as? [[String : Any]] {

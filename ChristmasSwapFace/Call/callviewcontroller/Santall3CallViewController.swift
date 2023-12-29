@@ -19,7 +19,7 @@ class Santall3CallViewController: UIViewController {
     var x: Int = 6
     @IBOutlet weak var timeLable: UILabel!
     @IBOutlet weak var cancelCall: UIButton!
-    @IBOutlet weak var backBtn: UIImageView!
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var cntLable: UILabel!
     @IBOutlet weak var callBtn: UIButton!
     @IBOutlet weak var santagif: UIImageView!
@@ -29,7 +29,7 @@ class Santall3CallViewController: UIViewController {
         player2?.stop()
         player?.stop()
         let storyboard = UIStoryboard(name: "CallStabord", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SanTacall2ViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainCallViewController")
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
@@ -117,6 +117,7 @@ class Santall3CallViewController: UIViewController {
        }
     override func viewDidLoad() {
         super.viewDidLoad()
+        backBtn.setTitle("", for: .normal)
         timeLable.isHidden = true
         //self.setupToHideKeyboardOnTapOnView()
         snow.loadGif(name: "snoww")
@@ -131,10 +132,10 @@ class Santall3CallViewController: UIViewController {
         print(UIScreen.main.bounds.size.height)
         santagif.clipsToBounds = true
         cntLable.isHidden = true
-        AdmobManager.shared.logEvent()
-        DispatchQueue.main.async {
-            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
-        }
+//        AdmobManager.shared.logEvent()
+//        DispatchQueue.main.async {
+//            self.view.addSubview(AdmobManager.shared.createBannerView(inVC: self))
+//        }
     }
     
 

@@ -28,7 +28,7 @@ class MainSwapfaceViewController: UIViewController {
     var listData:[ListVideoModal] = [ListVideoModal]()
     
     func getHomeNimeManga(andCompletion completion:@escaping (_ moviesResponse: [ListVideoModal], _ error: Error?) -> ()) {
-        APIService.shared.GetMangaAll() { (response, error) in
+        APIService.shared.GetMangaAll(albuum:"2") { (response, error) in
             if let listData = response{
                 self.listData = listData
                 DispatchQueue.main.async {
