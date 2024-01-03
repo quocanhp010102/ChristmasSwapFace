@@ -11,7 +11,7 @@ import Toast_Swift
 import AVFoundation
 import AppTrackingTransparency
 
-class MainViewController: BaseViewController {
+class LoginViewController: BaseViewController {
     var player: AVAudioPlayer?
     var player2: AVAudioPlayer?
     @IBOutlet weak var snow: UIImageView!
@@ -19,20 +19,39 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
-//    func setDataPro(){
-//        if let number_user: Int = KeychainWrapper.standard.integer(forKey: "saved_login_account"){
-//            for item in 0..<number_user{
-//                let emailUserKey = "email_login_" + String(item + 1)
-//                if let emailUser: String = KeychainWrapper.standard.string(forKey: emailUserKey){
-//                    self.userNameTextField.text = emailUser
-//                }
-//                let idPassUser = "pass_login_" + String(item + 1)
-//                if let passEmail: String = KeychainWrapper.standard.string(forKey: idPassUser){
-//                    self.passWordTextField.text = passEmail
-//                }
-//            }
-//        }
-//    }
+    func setDataPro(){
+        if let number_user: Int = KeychainWrapper.standard.integer(forKey: "saved_login_account"){
+            for item in 0..<number_user{
+                let emailUserKey = "email_login_" + String(item + 1)
+                if let emailUser: String = KeychainWrapper.standard.string(forKey: emailUserKey){
+                    self.userNameTextField.text = emailUser
+                }
+                let idPassUser = "pass_login_" + String(item + 1)
+                if let passEmail: String = KeychainWrapper.standard.string(forKey: idPassUser){
+                    self.passWordTextField.text = passEmail
+                }
+            }
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let emailUser: String = KeychainWrapper.standard.string(forKey: "email_login_temp"){
+            if emailUser != ""{
+                self.userNameTextField.text = emailUser
+                KeychainWrapper.standard.set("", forKey: "email_login_temp")
+                if let passEmail: String = KeychainWrapper.standard.string(forKey: "pass_login_temp"){
+                    self.passWordTextField.text = passEmail
+                    KeychainWrapper.standard.set("", forKey: "pass_login_temp")
+                }
+                KeychainWrapper.standard.set("", forKey: "time_login_temp")
+            }else{
+                setDataPro()
+            }
+            
+        }else{
+            setDataPro()
+        }
+    }
     @IBAction func buttonback2(){
         player?.stop()
 //        let vc = UIViewController()
@@ -44,6 +63,16 @@ class MainViewController: BaseViewController {
 
 
         
+    }
+    func callApiIP(){
+        RegisterAPI.shared.getIP { result in
+            switch result {
+            case .success(let success):
+                AppConstant.saveIp(model: success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
     }
     @IBAction func buttonback3forgetMain(){
         //        let vc = UIViewController()
@@ -154,11 +183,39 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
         playSound()
         snow.loadGif(name: "snoww")
+        self.navigationController?.isNavigationBarHidden = true
+        hideKeyboardWhenTappedAround()
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabelLisAccountLogin(tap:)))
+//        oldLoginLabel.addGestureRecognizer(tap)
+//        oldLoginLabel.isUserInteractionEnabled = true
+//        
+//        settingAttrLabel()
+//        callApiIP()
+        callApiIP()
+        self.errorMessageLabel.text = ""
         // Do any additional setup after loading the view.
         buttonback.setTitle("", for: .normal)
        
     }
-
+//    func settingAttrLabel() {
+//        let attrText = NSMutableAttributedString.getAttributedString(fromString: "Don’t have an account? Register")
+//        attrText.apply(color: UIColor(hexString: "FFFFFF"), subString: "Register")
+//        registerLabel.attributedText = attrText
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabelProvision(tap:)))
+//        registerLabel.addGestureRecognizer(tap)
+//        registerLabel.isUserInteractionEnabled = true
+//    }
+//    
+//    @objc func tapLabelLisAccountLogin(tap: UITapGestureRecognizer) {
+//        let vc = ListAccountVC(nibName: "ListAccountVC", bundle: nil)
+//        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//        self.present(vc, animated: true, completion: nil)
+//    }
+//    
+//    @objc func tapLabelProvision(tap: UITapGestureRecognizer) {
+//        let vc = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 
 }
 

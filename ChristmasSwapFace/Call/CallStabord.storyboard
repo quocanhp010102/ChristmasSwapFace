@@ -425,6 +425,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCP-pD-pOg">
                                         <rect key="frame" x="0.0" y="0.0" width="79" height="40"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1fI-Rq-qoM">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="40"/>
+                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qj-xd-uYB">
                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="40"/>
                                                 <state key="normal" title="Button"/>
@@ -435,10 +438,14 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="1fI-Rq-qoM" firstAttribute="top" secondItem="cCP-pD-pOg" secondAttribute="top" id="5cc-nY-iOD"/>
                                             <constraint firstItem="1qj-xd-uYB" firstAttribute="leading" secondItem="cCP-pD-pOg" secondAttribute="leading" id="EoA-Cy-m2u"/>
+                                            <constraint firstItem="1fI-Rq-qoM" firstAttribute="leading" secondItem="cCP-pD-pOg" secondAttribute="leading" id="KDO-ZY-4g9"/>
+                                            <constraint firstAttribute="trailing" secondItem="1fI-Rq-qoM" secondAttribute="trailing" id="Rpu-DI-vfO"/>
                                             <constraint firstItem="1qj-xd-uYB" firstAttribute="top" secondItem="cCP-pD-pOg" secondAttribute="top" id="UT7-xY-frn"/>
                                             <constraint firstAttribute="trailing" secondItem="1qj-xd-uYB" secondAttribute="trailing" id="bsu-bP-GHW"/>
                                             <constraint firstAttribute="bottom" secondItem="1qj-xd-uYB" secondAttribute="bottom" id="eNg-At-xnz"/>
+                                            <constraint firstAttribute="bottom" secondItem="1fI-Rq-qoM" secondAttribute="bottom" id="u4K-lt-jfj"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2Q-bh-Rzw">
@@ -455,6 +462,13 @@
                                             <constraint firstAttribute="bottom" secondItem="2Bb-dg-F5U" secondAttribute="bottom" id="iGk-uR-Tap"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bO0-vt-4Ml">
+                                        <rect key="frame" x="135" y="8" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cCP-pD-pOg" firstAttribute="top" secondItem="2AM-v3-6Be" secondAttribute="top" id="0Gh-91-oRO"/>
@@ -692,10 +706,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="avatarImage" destination="1fI-Rq-qoM" id="3dg-VO-Tg1"/>
                         <outlet property="btnSearch" destination="E5q-IJ-rfA" id="rv1-p2-RzC"/>
                         <outlet property="collectionViewGood" destination="ZwN-oi-kYY" id="mvl-pP-YNe"/>
                         <outlet property="collectionViewPage" destination="UYo-C8-jkh" id="hAP-tU-TY3"/>
                         <outlet property="profile" destination="1qj-xd-uYB" id="xp0-qP-jdz"/>
+                        <outlet property="username" destination="bO0-vt-4Ml" id="zF1-2h-mqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wk-De-70b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

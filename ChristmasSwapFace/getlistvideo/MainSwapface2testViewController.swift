@@ -12,14 +12,17 @@ class MainSwapface2testViewController: UIViewController {
     @IBOutlet weak var collectionViewGood: UICollectionView!
     @IBOutlet weak var btnSearch: UIButton!
     @IBOutlet weak var profile: UIButton!
+    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var collectionViewPage: UICollectionView!
+    @IBOutlet weak var avatarImage: UIImageView!
     @IBAction func actionNextProfile(_ sender: Any) {
+       
         let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         vc.userId = AppConstant.userId ?? 0
         vc.callAPIRecentComment()
         vc.callApiProfile()
         vc.callAPIUserEvent()
-        self.navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true, completion: nil)
     }
     var indexSelectPage = 0
     @IBAction func MenuActionPro(){
@@ -34,6 +37,19 @@ class MainSwapface2testViewController: UIViewController {
 //         getHomeNimeManga(album: buttonTitle, andCompletion: <#T##([ListVideoModal], Error?) -> ()##([ListVideoModal], Error?) -> ()##(_ moviesResponse: [ListVideoModal], _ error: Error?) -> ()#>)
 //      }
 //    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        if let url = URL(string: AppConstant.linkAvatar.asStringOrEmpty()){
+            avatarImage.af.setImage(withURL: url)
+        }
+        let nameDevice = UIDevice.current.name
+        if let userIDPro = AppConstant.userId , let tokenID = AppConstant.tokenID{
+            APIService.shared.postTokenNotification(token: tokenID, userID: String(userIDPro), deviceName: nameDevice){repond , error in
+                print(repond)
+            }
+        }
+    }
     var listTemplateVideo : [Temple2VideoModel] = [Temple2VideoModel]()
     var listData:[ListVideoModal] = [ListVideoModal]()
 //    func loadListVideoTemp(){
@@ -50,8 +66,10 @@ class MainSwapface2testViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(AppConstant.userId ?? 0)
         btnSearch.setTitle("", for: .normal)
-        profile.setTitle("", for: .normal)
+        profile.setTitle("", for: UIControl.State.normal)
+        self.username.text = String(AppConstant.userId!)
 //        colecttiondanhmuc.register(UINib(nibName: "getlistimageclvCell", bundle: nil), forCellWithReuseIdentifier: "getlistimageclvCell")
 //        CollectViewListVD.register(UINib(nibName: "VideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCollectionViewCell")
         collectionViewGood.register(UINib(nibName: VideoTemplateCLVCell.className, bundle: nil), forCellWithReuseIdentifier: VideoTemplateCLVCell.className)

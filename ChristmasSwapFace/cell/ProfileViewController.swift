@@ -57,7 +57,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var removeAccountButton: UIButton!
     @IBOutlet weak var ButtonAlert: UIButton!
     @IBOutlet weak var emailLabel: UILabel!
-
+    var id_user=0
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         backgroundView.gradient()
@@ -115,19 +115,24 @@ class ProfileViewController: UIViewController {
         APIService.shared.getProfile(user: self.userId ) { result, error in
             if let success = result {
                 if let idUser = success.id_user{
-                    self.userNameLabel.text = success.user_name
-                    self.countEventLabel.text = success.count_sukien?.toString()
-                    self.countCommentLabel.text = success.count_comment?.toString()
-                    self.countViewLabel.text = (success.count_view ?? 0).toString()
-                    self.ipRegisterLabel.text = "Ip Register: " + (success.ip_register ?? "")
-                    self.deviceRegisterLabel.text = "Device Register: " + (success.device_register ?? "")
-                    self.emailLabel.text = success.email ?? ""
+                    
+                    self.userNameLabel?.text = success.user_name
+                    self.countEventLabel?.text = success.count_sukien?.toString()
+                    self.countCommentLabel?.text = success.count_comment?.toString()
+                    self.countViewLabel?.text = (success.count_view ?? 0).toString()
+                    self.ipRegisterLabel?.text = "Ip Register: " + (success.ip_register ?? "")
+                    self.deviceRegisterLabel?.text = "Device Register: " + (success.device_register ?? "")
+                    self.emailLabel?.text = success.email ?? ""
                     let escapedString = success.link_avatar?.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
-                    if let url = URL(string: escapedString ?? "") {
-                        let processor = DownsamplingImageProcessor(size: self.avatarImage.bounds.size)
-                                     |> RoundCornerImageProcessor(cornerRadius: 20)
-                        self.avatarImage.kf.indicatorType = .activity
-                        self.avatarImage.kf.setImage(
+                    if let escapedString = success.link_avatar?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                       let url = URL(string: escapedString),
+                       let avatarImage = self.avatarImage {
+                        
+                        let processor = DownsamplingImageProcessor(size: avatarImage.bounds.size)
+                                         |> RoundCornerImageProcessor(cornerRadius: 20)
+                        
+                        avatarImage.kf.indicatorType = .activity
+                        avatarImage.kf.setImage(
                             with: url,
                             placeholder: UIImage(named: "placeholderImage"),
                             options: [
@@ -136,8 +141,7 @@ class ProfileViewController: UIViewController {
                                 .transition(.fade(1)),
                                 .cacheOriginalImage
                             ])
-                        {
-                            result in
+                        { result in
                             switch result {
                             case .success(let value):
                                 print("Task done for: \(value.source.url?.absoluteString ?? "")")
@@ -145,7 +149,11 @@ class ProfileViewController: UIViewController {
                                 print("Job failed: \(error.localizedDescription)")
                             }
                         }
+                    } else {
+                        // Handle the case where escapedString, url, or self.avatarImage is nil
+                        print("Error: escapedString, url, or self.avatarImage is nil")
                     }
+
                 }else{
                     if let message = success.ketqua{
                         let alert = UIAlertController(title: "Error Get Data", message: message, preferredStyle: .alert)
@@ -153,13 +161,13 @@ class ProfileViewController: UIViewController {
                             switch action.style{
                                 case .default:
                                 AppConstant.logout()
-                                self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+                                self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
                                 case .cancel:
                                 AppConstant.logout()
-                                self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+                                self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
                                 case .destructive:
                                 AppConstant.logout()
-                                self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+                                self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
                             }
                         }))
                         self.present(alert, animated: true, completion: nil)
@@ -211,8 +219,17 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func LogOutBtn(_ sender: Any) {
-        AppConstant.logout()
-        self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+        if AppConstant.userId == self.userId
+        {
+            AppConstant.logout()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+            self.present(vc, animated: true, completion: nil)
+           // self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
+        }
+       
+        
     }
 }
 

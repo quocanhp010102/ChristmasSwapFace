@@ -13,7 +13,7 @@ import UIKit
 import AVFoundation
 import AppTrackingTransparency
 
-var mainViewController = MainViewController()
+var mainViewController = LoginViewController()
 class SanTacall2ViewController: UIViewController {
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var snow: UIImageView!

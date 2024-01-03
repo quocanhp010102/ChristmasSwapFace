@@ -35,13 +35,13 @@ class InputPasswordVC: UIViewController ,UITextFieldDelegate{
                     alert.addAction(UIAlertAction(title: "Okie Signout", style: .default, handler: { action in
                         switch action.style{
                         case .default:
-                            self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+                            self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
                             return
                         case .cancel:
-                            self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+                            self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
                             return
                         case .destructive:
-                            self.navigationController?.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: true)
+                            self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
                             return
                         }
                     }))

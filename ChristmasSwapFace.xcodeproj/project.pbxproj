@@ -150,6 +150,7 @@
 		E6CBE19A2B45391D0031D2FC /* ReportCommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6CBE1992B45391D0031D2FC /* ReportCommentVC.xib */; };
 		E6CBE19C2B45392D0031D2FC /* ReportCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CBE19B2B45392D0031D2FC /* ReportCommentVC.swift */; };
 		E6CBE19E2B453A530031D2FC /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CBE19D2B453A530031D2FC /* Int+Extension.swift */; };
+		E6CBE1A02B455F630031D2FC /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CBE19F2B455F630031D2FC /* Start.swift */; };
 		E6CFFBD42B353D8200684331 /* SantalCall4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CFFBD32B353D8200684331 /* SantalCall4ViewController.swift */; };
 		E6CFFBD62B353F2E00684331 /* SantaCallVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CFFBD52B353F2E00684331 /* SantaCallVideoViewController.swift */; };
 		E6CFFBDB2B3542B700684331 /* StoryBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CFFBDA2B3542B700684331 /* StoryBar.storyboard */; };
@@ -157,7 +158,7 @@
 		E6CFFBDF2B35447400684331 /* StoryList1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CFFBDE2B35447400684331 /* StoryList1ViewController.swift */; };
 		E6E63B692B32D06F0001C824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E63B682B32D06F0001C824 /* AppDelegate.swift */; };
 		E6E63B6B2B32D06F0001C824 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E63B6A2B32D06F0001C824 /* SceneDelegate.swift */; };
-		E6E63B6D2B32D06F0001C824 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E63B6C2B32D06F0001C824 /* MainViewController.swift */; };
+		E6E63B6D2B32D06F0001C824 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E63B6C2B32D06F0001C824 /* LoginViewController.swift */; };
 		E6E63B702B32D06F0001C824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E63B6E2B32D06F0001C824 /* Main.storyboard */; };
 		E6E63B722B32D0720001C824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E63B712B32D0720001C824 /* Assets.xcassets */; };
 		E6E63B752B32D0720001C824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E63B732B32D0720001C824 /* LaunchScreen.storyboard */; };
@@ -318,6 +319,7 @@
 		E6CBE1992B45391D0031D2FC /* ReportCommentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportCommentVC.xib; sourceTree = "<group>"; };
 		E6CBE19B2B45392D0031D2FC /* ReportCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCommentVC.swift; sourceTree = "<group>"; };
 		E6CBE19D2B453A530031D2FC /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		E6CBE19F2B455F630031D2FC /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		E6CFFBD32B353D8200684331 /* SantalCall4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantalCall4ViewController.swift; sourceTree = "<group>"; };
 		E6CFFBD52B353F2E00684331 /* SantaCallVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaCallVideoViewController.swift; sourceTree = "<group>"; };
 		E6CFFBDA2B3542B700684331 /* StoryBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryBar.storyboard; sourceTree = "<group>"; };
@@ -326,7 +328,7 @@
 		E6E63B652B32D06F0001C824 /* ChristmasSwapFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChristmasSwapFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E63B682B32D06F0001C824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E63B6A2B32D06F0001C824 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E6E63B6C2B32D06F0001C824 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E6E63B6C2B32D06F0001C824 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E6E63B6F2B32D06F0001C824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6E63B712B32D0720001C824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6E63B742B32D0720001C824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -901,7 +903,8 @@
 		E6E63B7E2B32DCCA0001C824 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E6E63B6C2B32D06F0001C824 /* MainViewController.swift */,
+				E6CBE19F2B455F630031D2FC /* Start.swift */,
+				E6E63B6C2B32D06F0001C824 /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1102,6 +1105,7 @@
 				E6B58AD42B3957F800FD2DB0 /* UIViewController+Extension.swift in Sources */,
 				E6CBE1802B45348D0031D2FC /* CollectionViewCell.swift in Sources */,
 				E6CBE1222B4506CF0031D2FC /* ProfileServiceConfiguration.swift in Sources */,
+				E6CBE1A02B455F630031D2FC /* Start.swift in Sources */,
 				E6B58ABE2B39253100FD2DB0 /* APIService.swift in Sources */,
 				E6B58AC82B39341E00FD2DB0 /* String+Extension.swift in Sources */,
 				E6B2BF512B3448ED009057D2 /* Santall3CallViewController.swift in Sources */,
@@ -1131,7 +1135,7 @@
 				E6CBE17B2B4532230031D2FC /* R.generated.swift in Sources */,
 				E6CBE13F2B45157C0031D2FC /* UserEventViewController.swift in Sources */,
 				E619FA7D2B3C2B600058321F /* ProConfigure.swift in Sources */,
-				E6E63B6D2B32D06F0001C824 /* MainViewController.swift in Sources */,
+				E6E63B6D2B32D06F0001C824 /* LoginViewController.swift in Sources */,
 				E619FA952B3C2C030058321F /* Eliza.swift in Sources */,
 				E6CBE1442B4515F60031D2FC /* Template1TBVCell.swift in Sources */,
 				E619FA972B3C2C2A0058321F /* ChatModel.swift in Sources */,

@@ -45,8 +45,8 @@ class MainForgetViewController: BaseViewController {
 //                let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //                let vc = storyboard.instantiateViewController(withIdentifier: "otpForgetViewController") as! otpForgetViewController
 //                vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency self.present(vc, animated: true, completion: nil)
-                self.navigationController?.setRootViewController(viewController:MainViewController(),
-                                                                 controllerType: MainViewController.self)
+                self.navigationController?.setRootViewController(viewController:LoginViewController(),
+                                                                 controllerType: LoginViewController.self)
             }
         }
         
