@@ -173,13 +173,13 @@ class ProfileViewController: UIViewController {
         APIService.shared.getRecentComment(user: self.userId) { result, error in
             if let success = result {
                 self.dataRecentCommemt = success.comment_user.reversed()
-                self.recentCommentTableView.reloadData()
+                self.recentCommentTableView?.reloadData()
                 if self.dataRecentCommemt.count == 0 {
-                    self.noCommentLabel.isHidden = false
+                    self.noCommentLabel?.isHidden = false
                 } else {
-                    self.noCommentLabel.isHidden = true
+                    self.noCommentLabel?.isHidden = true
                 }
-                self.recentCommentTableView.reloadData()
+                self.recentCommentTableView?.reloadData()
             }
         }
     }

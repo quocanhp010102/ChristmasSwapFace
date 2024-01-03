@@ -12,6 +12,7 @@ class MainSwapfaceViewController: UIViewController {
     @IBOutlet weak var ButtonSwapfaceOUT:UIButton!
     @IBOutlet weak var CollectViewListVD:UICollectionView!
     //var listData:[ListVideoModal] = [ListVideoModal]()
+  
     @IBAction func playWebVideo(_ sender: Any) {
 
           guard let url = URL(string: "https://github.com/sonnh7289/funnyvideo_faceFunny/raw/main/Snaptik.app_7190233876864961838.mov") else {

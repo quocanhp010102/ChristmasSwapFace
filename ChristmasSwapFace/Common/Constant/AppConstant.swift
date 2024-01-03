@@ -61,10 +61,10 @@ struct AppConstant {
 
 extension AppConstant {
     
-//    static func saveIp(model: IPAddress) {
-//        IPAddress = model.ip
-//    }
-//    
+    static func saveIp(model: IPAddress) {
+        IPAddress = model.ip
+    }
+    
     static func logout() {
         userId = nil
     }

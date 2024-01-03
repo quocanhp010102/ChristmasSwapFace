@@ -10,7 +10,17 @@ import Kingfisher
 
 class MainSwapface2testViewController: UIViewController {
     @IBOutlet weak var collectionViewGood: UICollectionView!
+    @IBOutlet weak var btnSearch: UIButton!
+    @IBOutlet weak var profile: UIButton!
     @IBOutlet weak var collectionViewPage: UICollectionView!
+    @IBAction func actionNextProfile(_ sender: Any) {
+        let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        vc.userId = AppConstant.userId ?? 0
+        vc.callAPIRecentComment()
+        vc.callApiProfile()
+        vc.callAPIUserEvent()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     var indexSelectPage = 0
     @IBAction func MenuActionPro(){
         let vc = ListSwapResultVC(nibName: "ListSwapResultVC", bundle: nil)
@@ -40,6 +50,8 @@ class MainSwapface2testViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnSearch.setTitle("", for: .normal)
+        profile.setTitle("", for: .normal)
 //        colecttiondanhmuc.register(UINib(nibName: "getlistimageclvCell", bundle: nil), forCellWithReuseIdentifier: "getlistimageclvCell")
 //        CollectViewListVD.register(UINib(nibName: "VideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCollectionViewCell")
         collectionViewGood.register(UINib(nibName: VideoTemplateCLVCell.className, bundle: nil), forCellWithReuseIdentifier: VideoTemplateCLVCell.className)
