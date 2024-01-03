@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tNo-XA-cWI" customClass="ListImageCLVCell" customModule="FutureLove" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="272"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="212" height="272"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F95-Ib-VdD">
+                        <rect key="frame" x="0.0" y="0.0" width="212" height="251"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-Ko-gh4">
+                        <rect key="frame" x="0.0" y="251" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="mainOrange"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="8GL-gZ-QbQ"/>
+            <constraints>
+                <constraint firstItem="vRb-Ko-gh4" firstAttribute="leading" secondItem="tNo-XA-cWI" secondAttribute="leading" id="2Pv-9T-UVi"/>
+                <constraint firstAttribute="trailing" secondItem="vRb-Ko-gh4" secondAttribute="trailing" id="8ec-sV-vYP"/>
+                <constraint firstItem="F95-Ib-VdD" firstAttribute="leading" secondItem="tNo-XA-cWI" secondAttribute="leading" id="JQ7-6C-txf"/>
+                <constraint firstItem="vRb-Ko-gh4" firstAttribute="top" secondItem="F95-Ib-VdD" secondAttribute="bottom" id="SbN-ZL-45h"/>
+                <constraint firstAttribute="bottom" secondItem="vRb-Ko-gh4" secondAttribute="bottom" id="i02-4p-73F"/>
+                <constraint firstItem="F95-Ib-VdD" firstAttribute="top" secondItem="tNo-XA-cWI" secondAttribute="top" id="slD-iZ-kqH"/>
+                <constraint firstAttribute="trailing" secondItem="F95-Ib-VdD" secondAttribute="trailing" id="vkV-YM-Z15"/>
+            </constraints>
+            <size key="customSize" width="212" height="272"/>
+            <connections>
+                <outlet property="imageCover" destination="F95-Ib-VdD" id="92u-8V-Mbp"/>
+                <outlet property="timeLabel" destination="vRb-Ko-gh4" id="LGI-AQ-vg1"/>
+            </connections>
+            <point key="canvasLocation" x="170.99236641221373" y="76.056338028169023"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="mainOrange">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

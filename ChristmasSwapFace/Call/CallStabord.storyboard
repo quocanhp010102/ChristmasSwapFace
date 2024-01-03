@@ -533,18 +533,22 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-KG-ddr">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="22"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swap face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8E-h1-23B">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vej-hu-GBB">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="22"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemGreenColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="swapfaced">
+                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="MenuActionPro" destination="azW-k6-SLq" eventType="touchDown" id="v41-EN-hwh"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="d8E-h1-23B" secondAttribute="bottom" id="7Tn-My-cZf"/>
-                                            <constraint firstItem="d8E-h1-23B" firstAttribute="top" secondItem="u0T-KG-ddr" secondAttribute="top" id="8k3-ip-Hsa"/>
-                                            <constraint firstItem="d8E-h1-23B" firstAttribute="leading" secondItem="u0T-KG-ddr" secondAttribute="leading" id="S74-ge-ch1"/>
-                                            <constraint firstAttribute="trailing" secondItem="d8E-h1-23B" secondAttribute="trailing" id="r1B-3O-3gC"/>
+                                            <constraint firstItem="Vej-hu-GBB" firstAttribute="top" secondItem="u0T-KG-ddr" secondAttribute="top" id="EdR-Oa-sAV"/>
+                                            <constraint firstItem="Vej-hu-GBB" firstAttribute="leading" secondItem="u0T-KG-ddr" secondAttribute="leading" id="q7H-Vc-wwM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vej-hu-GBB" secondAttribute="trailing" id="syb-rM-d9L"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vej-hu-GBB" secondAttribute="bottom" id="yhz-AF-Ghv"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-xX-0Xg">
@@ -683,8 +687,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CollectViewListVD" destination="ZwN-oi-kYY" id="IdT-Og-hU0"/>
-                        <outlet property="colecttiondanhmuc" destination="UYo-C8-jkh" id="pBf-d1-Mqo"/>
+                        <outlet property="collectionViewGood" destination="ZwN-oi-kYY" id="mvl-pP-YNe"/>
+                        <outlet property="collectionViewPage" destination="UYo-C8-jkh" id="hAP-tU-TY3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wk-De-70b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

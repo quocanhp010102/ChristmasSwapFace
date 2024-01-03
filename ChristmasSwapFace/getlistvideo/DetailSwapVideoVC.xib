@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailSwapVideoVC" customModule="ChristmasSwapFace" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonBack" destination="ksq-RD-VwR" id="U4B-gW-dIc"/>
+                <outlet property="buttonDownloadSwap" destination="ahy-4v-eFZ" id="Odx-rf-pv9"/>
+                <outlet property="buttonShare" destination="4dh-Vj-18b" id="gHs-W7-ayf"/>
+                <outlet property="imageUserAvatar" destination="RQr-71-95H" id="1EN-dR-bSO"/>
+                <outlet property="imageViewCover" destination="4Bz-MX-1Ym" id="T70-ua-TMv"/>
+                <outlet property="labelUserName" destination="JhN-Xf-91G" id="uEy-a3-doK"/>
+                <outlet property="view" destination="cbV-kn-foG" id="BO6-Io-sPW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cbV-kn-foG">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksq-RD-VwR">
+                    <rect key="frame" x="30" y="50" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="aEr-A6-Yqo"/>
+                        <constraint firstAttribute="height" constant="36" id="oMw-kO-6Z5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="back"/>
+                    <connections>
+                        <action selector="BackApp" destination="-1" eventType="touchDown" id="Nc1-0n-4kS"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Bz-MX-1Ym">
+                    <rect key="frame" x="437" y="34" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="8WH-rb-Sn3"/>
+                        <constraint firstAttribute="height" constant="150" id="bOA-Az-OZX"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahy-4v-eFZ">
+                    <rect key="frame" x="956" y="34" width="68" height="58"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xacnhanforgetpass"/>
+                    <connections>
+                        <action selector="DownloadVideoSwap" destination="-1" eventType="touchDown" id="uGY-UI-9rF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-Vj-18b">
+                    <rect key="frame" x="20" y="96" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="csk-v8-jmu"/>
+                        <constraint firstAttribute="height" constant="40" id="hfF-qu-q5L"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xacnhanforgetpass"/>
+                    <connections>
+                        <action selector="shareLinkVideoSwap" destination="-1" eventType="touchDown" id="Nft-ma-Izo"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhN-Xf-91G">
+                    <rect key="frame" x="20" y="1293" width="984" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" systemColor="systemGreenColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RQr-71-95H">
+                    <rect key="frame" x="462" y="1183" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="38X-MB-GBf"/>
+                        <constraint firstAttribute="height" constant="100" id="oKN-it-PCG"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="l1b-Uu-oEJ"/>
+            <color key="backgroundColor" red="0.62352943419999995" green="0.43921568989999998" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="RQr-71-95H" firstAttribute="centerX" secondItem="l1b-Uu-oEJ" secondAttribute="centerX" id="5aA-nB-DnZ"/>
+                <constraint firstItem="JhN-Xf-91G" firstAttribute="leading" secondItem="l1b-Uu-oEJ" secondAttribute="leading" constant="20" id="7qN-pW-sVw"/>
+                <constraint firstItem="4dh-Vj-18b" firstAttribute="top" secondItem="ksq-RD-VwR" secondAttribute="bottom" constant="10" id="7r9-iV-tDx"/>
+                <constraint firstItem="4dh-Vj-18b" firstAttribute="leading" secondItem="l1b-Uu-oEJ" secondAttribute="leading" constant="20" id="9AZ-Uy-OB5"/>
+                <constraint firstItem="l1b-Uu-oEJ" firstAttribute="trailing" secondItem="JhN-Xf-91G" secondAttribute="trailing" constant="20" id="Kpz-WQ-Thl"/>
+                <constraint firstItem="ahy-4v-eFZ" firstAttribute="trailing" secondItem="l1b-Uu-oEJ" secondAttribute="trailing" id="L9P-7P-Lgi"/>
+                <constraint firstItem="ksq-RD-VwR" firstAttribute="top" secondItem="cbV-kn-foG" secondAttribute="top" constant="50" id="Mlu-yF-StU"/>
+                <constraint firstItem="l1b-Uu-oEJ" firstAttribute="bottom" secondItem="JhN-Xf-91G" secondAttribute="bottom" constant="30" id="OWt-mG-vP6"/>
+                <constraint firstItem="ksq-RD-VwR" firstAttribute="leading" secondItem="l1b-Uu-oEJ" secondAttribute="leading" constant="30" id="aDJ-Rm-cGO"/>
+                <constraint firstItem="4Bz-MX-1Ym" firstAttribute="top" secondItem="l1b-Uu-oEJ" secondAttribute="top" constant="10" id="cT8-Gn-hWI"/>
+                <constraint firstItem="ahy-4v-eFZ" firstAttribute="top" secondItem="4Bz-MX-1Ym" secondAttribute="top" id="dIN-AU-XSo"/>
+                <constraint firstItem="4Bz-MX-1Ym" firstAttribute="centerX" secondItem="l1b-Uu-oEJ" secondAttribute="centerX" id="g2D-yY-PEe"/>
+                <constraint firstItem="JhN-Xf-91G" firstAttribute="top" secondItem="RQr-71-95H" secondAttribute="bottom" constant="10" id="vfA-ad-p10"/>
+            </constraints>
+            <point key="canvasLocation" x="73" y="-32"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="44" height="44"/>
+        <image name="xacnhanforgetpass" width="44" height="44"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

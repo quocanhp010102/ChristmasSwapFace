@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideMenuViewController" customModule="ChristmasSwapFace" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="4Tf-bb-dhd" id="Kgt-gT-qaB"/>
+                <outlet property="slideMenuTableView" destination="KSS-9Q-u9A" id="K9f-gb-2iA"/>
+                <outlet property="view" destination="tif-LY-YfO" id="CF8-XF-FTY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tif-LY-YfO">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tf-bb-dhd">
+                    <rect key="frame" x="0.0" y="0.0" width="206.33333333333334" height="852"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KSS-9Q-u9A">
+                            <rect key="frame" x="0.0" y="150" width="206.33333333333334" height="602"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toy-KS-d5f">
+                            <rect key="frame" x="10" y="75" width="186.33333333333334" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Z1n-lb-ls5"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Home">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="tr_cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="backToHome:" destination="-1" eventType="touchUpInside" id="RE9-qb-1NA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.63921568630000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="KSS-9Q-u9A" firstAttribute="top" secondItem="4Tf-bb-dhd" secondAttribute="top" constant="150" id="5U2-0C-clw"/>
+                        <constraint firstItem="KSS-9Q-u9A" firstAttribute="leading" secondItem="4Tf-bb-dhd" secondAttribute="leading" id="Dfa-bV-Ggm"/>
+                        <constraint firstAttribute="trailing" secondItem="KSS-9Q-u9A" secondAttribute="trailing" id="V1P-bo-N8l"/>
+                        <constraint firstAttribute="trailing" secondItem="Toy-KS-d5f" secondAttribute="trailing" constant="10" id="WaM-GH-JfO"/>
+                        <constraint firstItem="Toy-KS-d5f" firstAttribute="leading" secondItem="4Tf-bb-dhd" secondAttribute="leading" constant="10" id="gp6-A7-Zul"/>
+                        <constraint firstAttribute="bottom" secondItem="KSS-9Q-u9A" secondAttribute="bottom" constant="100" id="sZV-El-J5I"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVv-A8-BPX">
+                    <rect key="frame" x="206.33333333333337" y="0.0" width="186.66666666666663" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="DismisBtn:" destination="-1" eventType="touchUpInside" id="wjy-k4-G7p"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Jgk-Wp-WiK"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qVv-A8-BPX" firstAttribute="top" secondItem="tif-LY-YfO" secondAttribute="top" id="4RB-Ep-YPF"/>
+                <constraint firstAttribute="bottom" secondItem="qVv-A8-BPX" secondAttribute="bottom" id="4vi-RN-fFR"/>
+                <constraint firstItem="4Tf-bb-dhd" firstAttribute="top" secondItem="tif-LY-YfO" secondAttribute="top" id="6Qg-bi-wbh"/>
+                <constraint firstItem="Jgk-Wp-WiK" firstAttribute="trailing" secondItem="qVv-A8-BPX" secondAttribute="trailing" id="9ri-8e-2UQ"/>
+                <constraint firstItem="4Tf-bb-dhd" firstAttribute="leading" secondItem="Jgk-Wp-WiK" secondAttribute="leading" id="CY9-Ak-p2a"/>
+                <constraint firstItem="4Tf-bb-dhd" firstAttribute="width" secondItem="tif-LY-YfO" secondAttribute="width" multiplier="197:375" id="X4Y-Wd-BHc"/>
+                <constraint firstItem="Jgk-Wp-WiK" firstAttribute="top" secondItem="Toy-KS-d5f" secondAttribute="top" constant="-16" id="amY-rf-dBk"/>
+                <constraint firstAttribute="bottom" secondItem="4Tf-bb-dhd" secondAttribute="bottom" id="ffL-ZI-dm7"/>
+                <constraint firstItem="qVv-A8-BPX" firstAttribute="leading" secondItem="4Tf-bb-dhd" secondAttribute="trailing" id="qJG-Em-j8L"/>
+            </constraints>
+            <point key="canvasLocation" x="45" y="21"/>
+        </view>
+    </objects>
+</document>

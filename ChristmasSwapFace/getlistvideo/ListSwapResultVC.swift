@@ -1,97 +1,88 @@
 //
-//  MainSwapface2testViewController.swift
-//  ChristmasSwapFace
+//  ListSwapResultVC.swift
+//  FutureLove
 //
-//  Created by quocanhppp on 29/12/2023.
+//  Created by khongtinduoc on 11/17/23.
 //
 
 import UIKit
 import Kingfisher
+import AVFoundation
 
-class MainSwapface2testViewController: UIViewController {
+class ListSwapResultVC: UIViewController {
+    @IBOutlet weak var buttonBack: UIButton!
+
     @IBOutlet weak var collectionViewGood: UICollectionView!
+    var listTemplateVideo : [ResultVideoModel] = [ResultVideoModel]()
     @IBOutlet weak var collectionViewPage: UICollectionView!
     var indexSelectPage = 0
-    @IBAction func MenuActionPro(){
-        let vc = ListSwapResultVC(nibName: "ListSwapResultVC", bundle: nil)
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func BackApp(){
+        self.dismiss(animated: true)
     }
-    @IBOutlet weak var buttonBack: UIButton!
-    var indexSelectedPage=0
-//    @IBAction func buttonAction(_ sender: UIButton) {
-//      if let buttonTitle = sender.title(for: .normal) {
-//         getHomeNimeManga(album: buttonTitle, andCompletion: <#T##([ListVideoModal], Error?) -> ()##([ListVideoModal], Error?) -> ()##(_ moviesResponse: [ListVideoModal], _ error: Error?) -> ()#>)
-//      }
-//    }
-    var listTemplateVideo : [Temple2VideoModel] = [Temple2VideoModel]()
-    var listData:[ListVideoModal] = [ListVideoModal]()
-//    func loadListVideoTemp(){
-//        APIService.shared.GetMangaAll(albuum:"1") { (response, error) in
-//            if let listData = response{
-//                self.listData = listData
-//                DispatchQueue.main.async {
-//                    self.CollectViewListVD.reloadData()
-//                }
-//            }
-//            completion(self.listData, error)
-//        }
-//    }
-   
     override func viewDidLoad() {
         super.viewDidLoad()
-//        colecttiondanhmuc.register(UINib(nibName: "getlistimageclvCell", bundle: nil), forCellWithReuseIdentifier: "getlistimageclvCell")
-//        CollectViewListVD.register(UINib(nibName: "VideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCollectionViewCell")
+        self.buttonBack.setTitle("", for: UIControl.State.normal)
+
         collectionViewGood.register(UINib(nibName: VideoTemplateCLVCell.className, bundle: nil), forCellWithReuseIdentifier: VideoTemplateCLVCell.className)
         collectionViewPage.register(UINib(nibName: "getlistimageclvCell", bundle: nil), forCellWithReuseIdentifier: "getlistimageclvCell")
         loadListVideoTemp()
-       // buttonBack.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-     //   buttonBack.tag = 1
-       // self.buttonBack.setTitle("", for: UIControl.State.normal)
-      //  self.userProfileButton.setTitle("", for: UIControl.State.normal)
-//        self.getHomeNimeManga(){_,_ in
-//               }
-        // Do any additional setup after loading the view.
     }
     func loadListVideoTemp(){
-        APIService.shared.listAllTemplateVideoSwap(page:0,categories:0){response,error in
+        APIService.shared.listAllVideoSwaped(page:1){response,error in
             self.listTemplateVideo = response
             self.collectionViewGood.reloadData()
         }
     }
+    func getThumbnailImage(forUrl url: URL) -> UIImage? {
+        let asset: AVAsset = AVAsset(url: url)
+        let imageGenerator = AVAssetImageGenerator(asset: asset)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        do {
+            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60), actualTime: nil)
+            return UIImage(cgImage: thumbnailImage)
+        } catch let error {
+            print(error)
+        }
+        return UIImage(named: "noimage")
     }
-    */
-
 }
-extension MainSwapface2testViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension ListSwapResultVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == collectionViewPage{
             indexSelectPage = indexPath.row
-            APIService.shared.listAllTemplateVideoSwap(page:indexSelectPage,categories:0){response,error in
+            APIService.shared.listAllVideoSwaped(page:indexSelectPage){response,error in
                 self.listTemplateVideo = response
                 self.collectionViewGood.reloadData()
             }
             self.collectionViewPage.reloadData()
         }else{
-            let vc = SwapVideoDetailVC(nibName: "SwapVideoDetailVC", bundle: nil)
-            vc.itemLink = self.listTemplateVideo[indexPath.row]
+            let vc = DetailSwapVideoVC(nibName: "DetailSwapVideoVC", bundle: nil)
+            var itemLink:DetailVideoModel = DetailVideoModel()
+            itemLink.linkimg = self.listTemplateVideo[indexPath.row].link_image
+            itemLink.link_vid_swap = self.listTemplateVideo[indexPath.row].link_vid_swap
+            itemLink.noidung = self.listTemplateVideo[indexPath.row].noidung_sukien
+            itemLink.id_sukien_video = self.listTemplateVideo[indexPath.row].id_video
+            itemLink.id_video_swap = self.listTemplateVideo[indexPath.row].id_video
+            itemLink.ten_video = self.listTemplateVideo[indexPath.row].ten_su_kien
+            itemLink.idUser = self.listTemplateVideo[indexPath.row].id_user
+//            itemLink.thoigian_swap = Floatself.listTemplateVideo[indexPath.row].thoigian_taovid
+//\            itemLink.device_tao_vid = self.listTemplateVideo[indexPath.row].thoigian_taovid
+            itemLink.thoigian_sukien = self.listTemplateVideo[indexPath.row].thoigian_taosk
+            itemLink.link_video_goc = self.listTemplateVideo[indexPath.row].link_vid_swap
+            itemLink.ip_tao_vid = self.listTemplateVideo[indexPath.row].id_video
+            itemLink.link_vid_swap = self.listTemplateVideo[indexPath.row].link_vid_swap
+            vc.itemDataSend = itemLink
             vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
             self.present(vc, animated: true, completion: nil)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if collectionView == collectionViewPage{
             return 100
         }
@@ -99,23 +90,27 @@ extension MainSwapface2testViewController: UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionViewPage {
+        if collectionView == collectionViewPage{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "getlistimageclvCell", for: indexPath) as! getlistimageclvCell
-           // cell.labelID.text = String(listData[indexPath.row].id_user)
-            cell.buttonDanhMuc.text=String(indexPath.row+1)
-            cell.buttonDanhMuc.textColor = UIColor.white
-            cell.buttonDanhMuc.font = UIFont.boldSystemFont(ofSize: 18.0)
-            cell.buttonDanhMuc.textAlignment = .center
-            cell.buttonDanhMuc.backgroundColor = UIColor.blue
-            cell.buttonDanhMuc.layer.cornerRadius = 15
-            cell.buttonDanhMuc.layer.masksToBounds = true
+            cell.buttonDanhMuc.text = String(indexPath.row + 1)
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
+            if indexPath.row == indexSelectPage{
+                cell.backgroundColor = UIColor.green
+            }else{
+                cell.backgroundColor = UIColor.white
+            }
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideoTemplateCLVCell.className, for: indexPath) as! VideoTemplateCLVCell
         cell.imageVideo.layer.cornerRadius = 10
-       // cell.imageVideo.layer.masksToBounds = true
-        cell.labelName.text = self.listTemplateVideo[indexPath.row].noi_dung ?? ""
-        let url = URL(string: self.listTemplateVideo[indexPath.row].thumbnail ?? "")
+        cell.imageVideo.layer.masksToBounds = true
+        cell.labelTimeRun.text = "Time Swap: " + (self.listTemplateVideo[indexPath.row].thoigian_swap ?? "")
+        cell.labelName.text = self.listTemplateVideo[indexPath.row].thoigian_taosk ?? ""
+//        if let url = URL(string: self.listTemplateVideo[indexPath.row].link_vid_swap ?? ""){
+//            cell.imageVideo.image = getThumbnailImage(forUrl: url)
+//        }
+        let url = URL(string: self.listTemplateVideo[indexPath.row].link_image ?? "")
         let processor = DownsamplingImageProcessor(size: cell.imageVideo.bounds.size)
                      |> RoundCornerImageProcessor(cornerRadius: 10)
         cell.imageVideo.kf.indicatorType = .activity
@@ -138,8 +133,6 @@ extension MainSwapface2testViewController: UICollectionViewDelegate, UICollectio
             }
         }
         return cell
-       
-        
     }
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
@@ -150,13 +143,13 @@ extension MainSwapface2testViewController: UICollectionViewDelegate, UICollectio
     
 }
 
-extension MainSwapface2testViewController: UICollectionViewDelegateFlowLayout {
+extension ListSwapResultVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .zero
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -166,16 +159,16 @@ extension MainSwapface2testViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == collectionViewPage{
             if UIDevice.current.userInterfaceIdiom == .pad{
-                return CGSize(width: UIScreen.main.bounds.width, height: 150)
+                return CGSize(width: UIScreen.main.bounds.width/20 - 10, height: 50)
             }
-            return CGSize(width: (UIScreen.main.bounds.width)/10-10, height: 150)
-        }else{
-            if UIDevice.current.userInterfaceIdiom == .pad{
-                return CGSize(width: (UIScreen.main.bounds.width)/3-10, height: 250)
-            }
-            return CGSize(width: (UIScreen.main.bounds.width)/2.1-10, height: 250)
+            return CGSize(width: UIScreen.main.bounds.width/10 - 10, height: 50)
         }
         
+        
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            return CGSize(width: UIScreen.main.bounds.width/4 - 10, height: 230)
+        }
+        return CGSize(width: UIScreen.main.bounds.width/2 - 10, height: 230)
     }
 }
 

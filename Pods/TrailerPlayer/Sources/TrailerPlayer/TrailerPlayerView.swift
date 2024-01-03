@@ -80,7 +80,7 @@ public class TrailerPlayerView: UIView {
         return label
     }()
     
-    private var player: TrailerPlayer?
+    public var player: TrailerPlayer?
     private var playerLayer: AVPlayerLayer?
     private var currentPlayingItem: TrailerPlayerItem?
     private var shouldResumePlay = false

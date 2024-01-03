@@ -765,136 +765,136 @@ class APIService:NSObject {
     //        closure(nil, nil)
     //    }
     //
-    //    func getDetailEvent(id: Int, closure: @escaping (_ response: DetailEvent?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/lovehistory/\(id)", param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: DetailEvent = DetailEvent()
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
-    //
-    //    func getIP(closure: @escaping (_ response: IPAddress?, _ error: Error?) -> Void) {
-    //        requestJSON("https://ipinfo.io/json", param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: IPAddress = IPAddress()
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
+        func getDetailEvent(id: Int, closure: @escaping (_ response: DetailEvent?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/lovehistory/\(id)", param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: DetailEvent = DetailEvent()
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
     
-    //    func postComents(param:[String: String], closure: @escaping (_ response: PostComments?, _ error: Error?) -> Void) {
-    //        requestFreeHostSON("https://metatechvn.store/lovehistory/comment", param: param, method: .POST, loading: true) { (data, error) in
-    //            if let data = data as? [String:Any]{
-    //                var  returnData:PostComments = PostComments()
-    //                returnData = returnData.initLoad(data)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
+        func getIP(closure: @escaping (_ response: IPAddress?, _ error: Error?) -> Void) {
+            requestJSON("https://ipinfo.io/json", param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: IPAddress = IPAddress()
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
     
-    //    func getCommentEvent(id: Int,id_toan_bo_su_kien: String,idUser:String, closure: @escaping (_ response: CommentEvent?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/lovehistory/comment/\(id)?id_toan_bo_su_kien=\(id_toan_bo_su_kien)" + "?id_user=" + idUser, param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: CommentEvent = CommentEvent()
-    //                print("https://metatechvn.store/lovehistory/comment/\(id)?id_toan_bo_su_kien=\(id_toan_bo_su_kien)")
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
+        func postComents(param:[String: String], closure: @escaping (_ response: PostComments?, _ error: Error?) -> Void) {
+            requestFreeHostSON("https://metatechvn.store/lovehistory/comment", param: param, method: .POST, loading: true) { (data, error) in
+                if let data = data as? [String:Any]{
+                    var  returnData:PostComments = PostComments()
+                    returnData = returnData.initLoad(data)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
     
-    //    func getPageComment(page: Int,idUser:String, closure: @escaping (_ response: CommentsModel?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/lovehistory/pageComment/" + String(page) + "?id_user=" + idUser, param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: CommentsModel = CommentsModel()
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
+        func getCommentEvent(id: Int,id_toan_bo_su_kien: String,idUser:String, closure: @escaping (_ response: CommentEvent?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/lovehistory/comment/\(id)?id_toan_bo_su_kien=\(id_toan_bo_su_kien)" + "?id_user=" + idUser, param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: CommentEvent = CommentEvent()
+                    print("https://metatechvn.store/lovehistory/comment/\(id)?id_toan_bo_su_kien=\(id_toan_bo_su_kien)")
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
     
-    //    func getRecentComment(user: Int, closure: @escaping (_ response: RecentCommentModel?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/lovehistory/comment/user/\(user)", param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: RecentCommentModel = RecentCommentModel()
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
+        func getPageComment(page: Int,idUser:String, closure: @escaping (_ response: CommentsModel?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/lovehistory/pageComment/" + String(page) + "?id_user=" + idUser, param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: CommentsModel = CommentsModel()
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
+    
+        func getRecentComment(user: Int, closure: @escaping (_ response: RecentCommentModel?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/lovehistory/comment/user/\(user)", param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: RecentCommentModel = RecentCommentModel()
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
     //    //${server}/lovehistory/user/video/${user.id_user}?trang=${count}
-    //    func getRecentVideoSwap(user: Int, page: Int, closure: @escaping (_ response: [ResultVideoModel]?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/lovehistory/user/video/\(user)?trang=\(page)", param: nil, method: .GET, loading: true) { (data, error) in
-    //            var listVideoReturn : [ResultVideoModel] = [ResultVideoModel]()
-    //            if let data = data as? [String:Any]{
-    //                if let data2 = data["list_sukien_video"] as? [[String:Any]]{
-    //                    for item in data2{
-    //                        if let dataListSuKien = item["sukien_video"] as? [[String:Any]]{
-    //                            for item2 in dataListSuKien{
-    //                                var itemvideoAdd: ResultVideoModel = ResultVideoModel()
-    //                                itemvideoAdd = itemvideoAdd.initLoad(item2)
-    //                                listVideoReturn.append(itemvideoAdd)
-    //                            }
-    //                        }
-    //                    }
-    //                    closure(listVideoReturn,nil)
-    //                }else{
-    //                    closure([ResultVideoModel](),nil)
-    //                }
-    //            }else{
-    //                closure([ResultVideoModel](),nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
-    //
-    //    func getUserEvent(user: Int, closure: @escaping (_ response: HomeModel?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/lovehistory/user/\(user)", param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: HomeModel = HomeModel()
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
-    //
-    //    func getProfile(user: Int, closure: @escaping (_ response: ProfileModel?, _ error: Error?) -> Void) {
-    //        requestJSON("https://metatechvn.store/profile/\(user)", param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var returnData: ProfileModel = ProfileModel()
-    //                returnData = returnData.initLoad(data2)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
-    //
+        func getRecentVideoSwap(user: Int, page: Int, closure: @escaping (_ response: [ResultVideoModel]?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/lovehistory/user/video/\(user)?trang=\(page)", param: nil, method: .GET, loading: true) { (data, error) in
+                var listVideoReturn : [ResultVideoModel] = [ResultVideoModel]()
+                if let data = data as? [String:Any]{
+                    if let data2 = data["list_sukien_video"] as? [[String:Any]]{
+                        for item in data2{
+                            if let dataListSuKien = item["sukien_video"] as? [[String:Any]]{
+                                for item2 in dataListSuKien{
+                                    var itemvideoAdd: ResultVideoModel = ResultVideoModel()
+                                    itemvideoAdd = itemvideoAdd.initLoad(item2)
+                                    listVideoReturn.append(itemvideoAdd)
+                                }
+                            }
+                        }
+                        closure(listVideoReturn,nil)
+                    }else{
+                        closure([ResultVideoModel](),nil)
+                    }
+                }else{
+                    closure([ResultVideoModel](),nil)
+                }
+            }
+            closure(nil, nil)
+        }
+    
+        func getUserEvent(user: Int, closure: @escaping (_ response: HomeModel?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/lovehistory/user/\(user)", param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: HomeModel = HomeModel()
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
+    
+        func getProfile(user: Int, closure: @escaping (_ response: ProfileModel?, _ error: Error?) -> Void) {
+            requestJSON("https://metatechvn.store/profile/\(user)", param: nil, method: .GET, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var returnData: ProfileModel = ProfileModel()
+                    returnData = returnData.initLoad(data2)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
+    
     //    func getEventsAPI(linkNam: String, linkNu: String,device: String, ip: String, Id: String, tennam:String,tennu:String, closure: @escaping (_ response: LoveModel?, _ error: Error?) -> Void) {
     //        if let linkDevice = device.urlEncoded,let tenNamLink = tennam.urlEncoded,let tenNuLink = tennu.urlEncoded{
     //            requestTokenFolderGhepDoi("https://thinkdiff.us/getdata?device_them_su_kien=\(linkDevice)&ip_them_su_kien=\(ip)&id_user=\(Id)&ten_nam=\(tenNamLink)&ten_nu=\(tenNuLink)", linkNam: linkNam,linkNu: linkNu, param: nil, method: .GET, loading: true) { (data, error) in
@@ -923,33 +923,33 @@ class APIService:NSObject {
     //        }
     //        closure(nil, nil)
     //    }
-    //    func searchComment(searchText: String, closure: @escaping (_ response: HomeModel?, _ error: Error?) -> Void) {
-    //        let LinkText = "https://metatechvn.store/search?word=" + searchText
-    //        requestSON(LinkText,"","", param: nil, method: .GET, loading: true) { (data, error) in
-    //            if let data = data as? [String:Any]{
-    //                var returnData: HomeModel = HomeModel()
-    //                returnData = returnData.initLoad(data)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
-    //
-    //    func reportComment(param:[String: String], closure: @escaping (_ response: RegisterModel?, _ error: Error?) -> Void) {
-    //        requestFreeHostSON("https://metatechvn.store/report/comment", param: param, method: .POST, loading: true) { (data, error) in
-    //            if let data = data as? [String:Any]{
-    //                var returnData: RegisterModel = RegisterModel()
-    //                returnData = returnData.initLoad(data)
-    //                closure(returnData,nil)
-    //            }else{
-    //                closure(nil,nil)
-    //            }
-    //        }
-    //        closure(nil, nil)
-    //    }
-    //
+        func searchComment(searchText: String, closure: @escaping (_ response: HomeModel?, _ error: Error?) -> Void) {
+            let LinkText = "https://metatechvn.store/search?word=" + searchText
+            requestSON(LinkText,"","", param: nil, method: .GET, loading: true) { (data, error) in
+                if let data = data as? [String:Any]{
+                    var returnData: HomeModel = HomeModel()
+                    returnData = returnData.initLoad(data)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
+    
+        func reportComment(param:[String: String], closure: @escaping (_ response: RegisterModel?, _ error: Error?) -> Void) {
+            requestFreeHostSON("https://metatechvn.store/report/comment", param: param, method: .POST, loading: true) { (data, error) in
+                if let data = data as? [String:Any]{
+                    var returnData: RegisterModel = RegisterModel()
+                    returnData = returnData.initLoad(data)
+                    closure(returnData,nil)
+                }else{
+                    closure(nil,nil)
+                }
+            }
+            closure(nil, nil)
+        }
+    
         func getAll_KeyAPI(closure: @escaping (_ response: [APIKeyIMGBB], _ error: Error?) -> Void) {
             requestJSON("https://raw.githubusercontent.com/sonnh7289/python3-download/main/key-ios.json" , param: nil, method: .GET, loading: true) { (data, error) in
                 var listAPIkey:[APIKeyIMGBB] = [APIKeyIMGBB]()
@@ -967,24 +967,24 @@ class APIService:NSObject {
             closure([APIKeyIMGBB](), nil)
         }
     
-    //    func APISearchUser(nameSearch:String,closure: @escaping (_ response: [UserSearchModel], _ error: Error?) -> Void) {
-    //        let linkUrl = "https://metatechvn.store/profile/user/" + (nameSearch.urlEncoded ?? "")
-    //        requestJSON(linkUrl , param: nil, method: .GET, loading: true) { (data, error) in
-    //            var listAPIkey:[UserSearchModel] = [UserSearchModel]()
-    //            if let data2 = data as? [[String:Any]]{
-    //                for item in data2{
-    //                    var returnData: UserSearchModel = UserSearchModel()
-    //                    returnData = returnData.initLoad(item)
-    //                    listAPIkey.append(returnData)
-    //                }
-    //                closure(listAPIkey,nil)
-    //            }else{
-    //                closure([UserSearchModel](),nil)
-    //            }
-    //        }
-    //        closure([UserSearchModel](), nil)
-    //    }
-    //
+        func APISearchUser(nameSearch:String,closure: @escaping (_ response: [UserSearchModel], _ error: Error?) -> Void) {
+            let linkUrl = "https://metatechvn.store/profile/user/" + (nameSearch.urlEncoded ?? "")
+            requestJSON(linkUrl , param: nil, method: .GET, loading: true) { (data, error) in
+                var listAPIkey:[UserSearchModel] = [UserSearchModel]()
+                if let data2 = data as? [[String:Any]]{
+                    for item in data2{
+                        var returnData: UserSearchModel = UserSearchModel()
+                        returnData = returnData.initLoad(item)
+                        listAPIkey.append(returnData)
+                    }
+                    closure(listAPIkey,nil)
+                }else{
+                    closure([UserSearchModel](),nil)
+                }
+            }
+            closure([UserSearchModel](), nil)
+        }
+    
     //    //https://raw.githubusercontent.com/sonnh7289/funnyvideo_faceFunny/main/videoswapface.json
     //    func listTemplateVideoSwap(closure: @escaping (_ response: [TempleVideoModel], _ error: Error?) -> Void) {
     //        let linkUrl = "https://raw.githubusercontent.com/sonnh7289/mega27-5-2023/main/json-tam-video.json"
@@ -1024,138 +1024,93 @@ class APIService:NSObject {
     //        // closure("Please Wait To Remove", nil)
     //    }
     //    //https://metatechvn.store/lovehistory/listvideo
-    //    func listAllTemplateVideoSwap(page:Int,categories:Int,closure: @escaping (_ response: [Temple2VideoModel], _ error: Error?) -> Void) {
-    //        let linkUrl = "https://metatechvn.store/lovehistory/listvideo/" + String(page) + "?category=" + String(categories)
-    //        requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
-    //            var listVideoReturn : [Temple2VideoModel] = [Temple2VideoModel]()
-    //            if let data = data as? [String:Any]{
-    //                if let data2 = data["list_sukien_video"] as? [[String:Any]]{
-    //                    for item in data2{
-    //                        var itemvideoAdd: Temple2VideoModel = Temple2VideoModel()
-    //                        itemvideoAdd = itemvideoAdd.initLoad(item)
-    //                        listVideoReturn.append(itemvideoAdd)
-    //                    }
-    //                    closure(listVideoReturn,nil)
-    //                }else{
-    //                    closure([Temple2VideoModel](),nil)
-    //                }
-    //            }else{
-    //                closure([Temple2VideoModel](),nil)
-    //            }
-    //        }
-    //        // closure("Please Wait To Remove", nil)
-    //    }
-    //    func listAllVideoSwaped(page:Int,closure: @escaping (_ response: [ResultVideoModel], _ error: Error?) -> Void) {
-    //        let linkUrl = "https://metatechvn.store/lovehistory/video/" + String(page)
-    //        requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
-    //            var listVideoReturn : [ResultVideoModel] = [ResultVideoModel]()
-    //            if let data = data as? [String:Any]{
-    //                if let data2 = data["list_sukien_video"] as? [[String:Any]]{
-    //                    for item in data2{
-    //                        if let dataListSuKien = item["sukien_video"] as? [[String:Any]]{
-    //                            for item2 in dataListSuKien{
-    //                                var itemvideoAdd: ResultVideoModel = ResultVideoModel()
-    //                                itemvideoAdd = itemvideoAdd.initLoad(item2)
-    //                                listVideoReturn.append(itemvideoAdd)
-    //                            }
-    //                        }
-    //                    }
-    //                    closure(listVideoReturn,nil)
-    //                }else{
-    //                    closure([ResultVideoModel](),nil)
-    //                }
-    //            }else{
-    //                closure([ResultVideoModel](),nil)
-    //            }
-    //        }
-    //        // closure("Please Wait To Remove", nil)
-    //    }
-    //    func listImageUploaded(type:String,idUser:String,closure: @escaping (_ response: [String], _ error: Error?) -> Void) {
-    //        let linkUrl = "https://metatechvn.store/images/" + idUser + "?type=" + type
-    //        requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
-    //            var listLinkImage : [String] = [String]()
-    //            if let data = data as? [String:Any]{
-    //                if type == "nam"{
-    //                    if let data2 = data["image_links_nam"] as? [String]{
-    //                        listLinkImage = data2
-    //                        closure(listLinkImage,nil)
-    //                    }else{
-    //                        closure([String](),nil)
-    //                    }
-    //                }else if type == "nu"{
-    //                    if let data2 = data["image_links_nu"] as? [String]{
-    //                        listLinkImage = data2
-    //                        closure(listLinkImage,nil)
-    //                    }else{
-    //                        closure([String](),nil)
-    //                    }
-    //                }else if type == "video"{
-    //                    if let data2 = data["image_links_video"] as? [String]{
-    //                        listLinkImage = data2
-    //                        closure(listLinkImage,nil)
-    //                    }else{
-    //                        closure([String](),nil)
-    //                    }
-    //                }
-    //            }else{
-    //                closure([String](),nil)
-    //            }
-    //        }
-    //        // closure("Please Wait To Remove", nil)
-    //    }
-    ////    func UploadVideoBatKyAndGen(_ url: String,
-    ////                              videoUpload: UIImage,
-    ////                              method: ApiMethod,
-    ////                              loading: Bool,
-    ////                              completion: @escaping ApiCompletion)
-    ////    {
-    ////        let form = MultipartForm(parts: [
-    ////            MultipartForm.Part(name: "src_vid", data: ImageUpload.jpegData(compressionQuality: 1)!, filename: "src_vid.mp4", contentType: "video/mp4"),
-    ////        ])
-    ////
-    ////        var request = URLRequest(url: URL(string:url)!)
-    ////        request.httpMethod = "POST"
-    ////        request.setValue(form.contentType, forHTTPHeaderField: "Content-Type")
-    ////        var result:(message:String, data:Data?) = (message: "Fail", data: nil)
-    ////
-    ////        URLSession.shared.uploadTask(with: request, from: form.bodyData){ (data, response, error) in
-    ////
-    ////            if let error = error {
-    ////                 // Error
-    ////            }
-    ////            result.data = data
-    ////            DispatchQueue.main.async {
-    ////                // check for fundamental networking error
-    ////                guard let data = data, error == nil else {
-    ////                    completion(nil, error)
-    ////                    return
-    ////                }
-    ////                // check for http errors
-    ////                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200, let res = response {
-    ////                }
-    ////                if let resJson = self.convertToJson(data) {
-    ////                    completion(resJson, nil)
-    ////                }
-    ////                if let resString = String(data: data, encoding: .utf8) {
-    ////                    completion(resString, error)
-    ////                }
-    ////                else {
-    ////                    completion(nil, error)
-    ////                }
-    ////            }
-    ////            // Do something after the upload task is complete
-    ////
-    ////       }.resume()
-    ////    }
-    //    ///upload-gensk/{id_user}
-    //    func UploadImagesToGenRieng(_ url: String,
-    //                              ImageUpload: UIImage,
+        func listAllTemplateVideoSwap(page:Int,categories:Int,closure: @escaping (_ response: [Temple2VideoModel], _ error: Error?) -> Void) {
+            let linkUrl = "https://metatechvn.store/lovehistory/listvideo/" + String(page) + "?category=" + String(categories)
+            requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
+                var listVideoReturn : [Temple2VideoModel] = [Temple2VideoModel]()
+                if let data = data as? [String:Any]{
+                    if let data2 = data["list_sukien_video"] as? [[String:Any]]{
+                        for item in data2{
+                            var itemvideoAdd: Temple2VideoModel = Temple2VideoModel()
+                            itemvideoAdd = itemvideoAdd.initLoad(item)
+                            listVideoReturn.append(itemvideoAdd)
+                        }
+                        closure(listVideoReturn,nil)
+                    }else{
+                        closure([Temple2VideoModel](),nil)
+                    }
+                }else{
+                    closure([Temple2VideoModel](),nil)
+                }
+            }
+            // closure("Please Wait To Remove", nil)
+        }
+        func listAllVideoSwaped(page:Int,closure: @escaping (_ response: [ResultVideoModel], _ error: Error?) -> Void) {
+            let linkUrl = "https://metatechvn.store/lovehistory/video/" + String(page)
+            requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
+                var listVideoReturn : [ResultVideoModel] = [ResultVideoModel]()
+                if let data = data as? [String:Any]{
+                    if let data2 = data["list_sukien_video"] as? [[String:Any]]{
+                        for item in data2{
+                            if let dataListSuKien = item["sukien_video"] as? [[String:Any]]{
+                                for item2 in dataListSuKien{
+                                    var itemvideoAdd: ResultVideoModel = ResultVideoModel()
+                                    itemvideoAdd = itemvideoAdd.initLoad(item2)
+                                    listVideoReturn.append(itemvideoAdd)
+                                }
+                            }
+                        }
+                        closure(listVideoReturn,nil)
+                    }else{
+                        closure([ResultVideoModel](),nil)
+                    }
+                }else{
+                    closure([ResultVideoModel](),nil)
+                }
+            }
+            // closure("Please Wait To Remove", nil)
+        }
+        func listImageUploaded(type:String,idUser:String,closure: @escaping (_ response: [String], _ error: Error?) -> Void) {
+            let linkUrl = "https://metatechvn.store/images/" + idUser + "?type=" + type
+            requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
+                var listLinkImage : [String] = [String]()
+                if let data = data as? [String:Any]{
+                    if type == "nam"{
+                        if let data2 = data["image_links_nam"] as? [String]{
+                            listLinkImage = data2
+                            closure(listLinkImage,nil)
+                        }else{
+                            closure([String](),nil)
+                        }
+                    }else if type == "nu"{
+                        if let data2 = data["image_links_nu"] as? [String]{
+                            listLinkImage = data2
+                            closure(listLinkImage,nil)
+                        }else{
+                            closure([String](),nil)
+                        }
+                    }else if type == "video"{
+                        if let data2 = data["image_links_video"] as? [String]{
+                            listLinkImage = data2
+                            closure(listLinkImage,nil)
+                        }else{
+                            closure([String](),nil)
+                        }
+                    }
+                }else{
+                    closure([String](),nil)
+                }
+            }
+            // closure("Please Wait To Remove", nil)
+        }
+    //    func UploadVideoBatKyAndGen(_ url: String,
+    //                              videoUpload: UIImage,
     //                              method: ApiMethod,
     //                              loading: Bool,
     //                              completion: @escaping ApiCompletion)
     //    {
     //        let form = MultipartForm(parts: [
-    //            MultipartForm.Part(name: "src_img", data: ImageUpload.jpegData(compressionQuality: 1)!, filename: "src_img.jpeg", contentType: "image/jpeg"),
+    //            MultipartForm.Part(name: "src_vid", data: ImageUpload.jpegData(compressionQuality: 1)!, filename: "src_vid.mp4", contentType: "video/mp4"),
     //        ])
     //
     //        var request = URLRequest(url: URL(string:url)!)
@@ -1192,84 +1147,129 @@ class APIService:NSObject {
     //
     //       }.resume()
     //    }
-    //    //
-    //    func ListVideoSwaped(page:Int,closure: @escaping (_ response: [VideoModel], _ error: Error?) -> Void) {
-    //        let linkUrl = "https://metatechvn.store/lovehistory/video/" + String(page)
-    //        requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
-    //            var listVideoReturn : [VideoModel] = [VideoModel]()
-    //            if let data2 = data as? [String:Any]{
-    //                if let listTongToanBo =  data2["list_sukien_video"] as? [[String:Any]]{
-    //                    for item in listTongToanBo{
-    //                        if let listVideo2 = item["sukien_video"] as? [[String:Any]]{
-    //                            for item2 in listVideo2{
-    //                                var itemvideoAdd: VideoModel = VideoModel()
-    //                                itemvideoAdd = itemvideoAdd.initLoad(item2)
-    //                                listVideoReturn.append(itemvideoAdd)
-    //                            }
-    //                        }
-    //                    }
-    //                    closure(listVideoReturn,nil)
-    //                }
-    //            }else{
-    //                closure([VideoModel](),nil)
-    //            }
-    //            // closure("Please Wait To Remove", nil)
-    //        }
-    //    }
-    //    //https://lhvn.online/getdata/genvideo?id_video=10&device_them_su_kien=fds&ip_them_su_kien=g4&id_user=6&image=/var/www/build_futurelove/image/image_user/3/video/3_vid_86963.jpg&ten_video=chao em
-    //    func GenVideoSwap(device_them_su_kien:String,id_video:String,ip_them_su_kien:String,id_user:String,link_img:String, ten_video:String,closure: @escaping (_ response: DetailVideoModel?, _ error: Error?) -> Void) {
-    //        let newString = link_img.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
-    //        if let devicePro = device_them_su_kien.urlEncoded{
-    //            requestTokenFolderGhepDoi("https://lhvn.online/getdata/genvideo?id_video=\(id_video)&device_them_su_kien=\(devicePro)&ip_them_su_kien=\(ip_them_su_kien)&id_user=\(id_user)&image=\(newString)&ten_video=\(ten_video)", linkNam: "", linkNu: "", param: nil, method: .GET, loading: true) { (data, error) in
-    //                if let data = data as? [String:Any]{
-    //                    var itemAdd:DetailVideoModel = DetailVideoModel()
-    //                    itemAdd = itemAdd.initLoad(data)
-    //                    closure( itemAdd, nil)
-    //
-    //                }else{
-    //                    closure( DetailVideoModel(), nil)
-    //                }
-    //            }
-    //        }
-    //    }
-    //
-    //    func RemoveMyAccount(userID:String,password:String,closure: @escaping (_ response: String, _ error: Error?) -> Void) {
-    //        let paramSend:[String: String] = ["password":password]
-    //        let linkUrl = "https://metatechvn.store/deleteuser/" + userID
-    //        requestRemoveAccount(linkUrl, param: paramSend, method: .POST, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var messageSend = ""
-    //                if let temp = data2["message"] as? String {messageSend = temp}
-    //                closure(messageSend,nil)
-    //            }else{
-    //                if let data = data as? String{
-    //                    closure(data,nil)
-    //                }
-    //                closure("ERROR NO Message",nil)
-    //            }
-    //        }
-    //        // closure("Please Wait To Remove", nil)
-    //    }
-    //
-    //    func postTokenNotification(token:String,userID:String,deviceName:String,closure: @escaping (_ response: String, _ error: Error?) -> Void) {
-    //        let paramSend:[String: String] = ["device_token":token,"id_user":userID,"device_name":deviceName]
-    //        requestRemoveAccount("https://metatechvn.store/add/token", param: paramSend, method: .POST, loading: true) { (data, error) in
-    //            if let data2 = data as? [String:Any]{
-    //                var messageSend = ""
-    //                if let temp = data2["message"] as? String {messageSend = temp}
-    //                closure(messageSend,nil)
-    //            }else{
-    //                if let data = data as? String{
-    //                    closure(data,nil)
-    //                }
-    //                closure("ERROR NO Message",nil)
-    //            }
-    //        }
-    //    }
-    //}
-    //
+        ///upload-gensk/{id_user}
+        func UploadImagesToGenRieng(_ url: String,
+                                  ImageUpload: UIImage,
+                                  method: ApiMethod,
+                                  loading: Bool,
+                                  completion: @escaping ApiCompletion)
+        {
+            let form = MultipartForm(parts: [
+                MultipartForm.Part(name: "src_img", data: ImageUpload.jpegData(compressionQuality: 1)!, filename: "src_img.jpeg", contentType: "image/jpeg"),
+            ])
     
-}
+            var request = URLRequest(url: URL(string:url)!)
+            request.httpMethod = "POST"
+            request.setValue(form.contentType, forHTTPHeaderField: "Content-Type")
+            var result:(message:String, data:Data?) = (message: "Fail", data: nil)
+    
+            URLSession.shared.uploadTask(with: request, from: form.bodyData){ (data, response, error) in
+    
+                if let error = error {
+                     // Error
+                }
+                result.data = data
+                DispatchQueue.main.async {
+                    // check for fundamental networking error
+                    guard let data = data, error == nil else {
+                        completion(nil, error)
+                        return
+                    }
+                    // check for http errors
+                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200, let res = response {
+                    }
+                    if let resJson = self.convertToJson(data) {
+                        completion(resJson, nil)
+                    }
+                    if let resString = String(data: data, encoding: .utf8) {
+                        completion(resString, error)
+                    }
+                    else {
+                        completion(nil, error)
+                    }
+                }
+                // Do something after the upload task is complete
+    
+           }.resume()
+        }
+        //
+        func ListVideoSwaped(page:Int,closure: @escaping (_ response: [VideoModel], _ error: Error?) -> Void) {
+            let linkUrl = "https://metatechvn.store/lovehistory/video/" + String(page)
+            requestJSON(linkUrl, param: nil, method: .GET, loading: true) { (data, error) in
+                var listVideoReturn : [VideoModel] = [VideoModel]()
+                if let data2 = data as? [String:Any]{
+                    if let listTongToanBo =  data2["list_sukien_video"] as? [[String:Any]]{
+                        for item in listTongToanBo{
+                            if let listVideo2 = item["sukien_video"] as? [[String:Any]]{
+                                for item2 in listVideo2{
+                                    var itemvideoAdd: VideoModel = VideoModel()
+                                    itemvideoAdd = itemvideoAdd.initLoad(item2)
+                                    listVideoReturn.append(itemvideoAdd)
+                                }
+                            }
+                        }
+                        closure(listVideoReturn,nil)
+                    }
+                }else{
+                    closure([VideoModel](),nil)
+                }
+                // closure("Please Wait To Remove", nil)
+            }
+        }
+//        https://lhvn.online/getdata/genvideo?id_video=10&device_them_su_kien=fds&ip_them_su_kien=g4&id_user=6&image=/var/www/build_futurelove/image/image_user/3/video/3_vid_86963.jpg&ten_video=chao em
+        func GenVideoSwap(device_them_su_kien:String,id_video:String,ip_them_su_kien:String,id_user:String,link_img:String, ten_video:String,closure: @escaping (_ response: DetailVideoModel?, _ error: Error?) -> Void) {
+            let newString = link_img.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
+            if let devicePro = device_them_su_kien.urlEncoded{
+                requestTokenFolderGhepDoi("https://lhvn.online/getdata/genvideo?id_video=\(id_video)&device_them_su_kien=\(devicePro)&ip_them_su_kien=\(ip_them_su_kien)&id_user=\(id_user)&image=\(newString)&ten_video=\(ten_video)", linkNam: "", linkNu: "", param: nil, method: .GET, loading: true) { (data, error) in
+                    if let data = data as? [String:Any]{
+                        var itemAdd:DetailVideoModel = DetailVideoModel()
+                        itemAdd = itemAdd.initLoad(data)
+                        closure( itemAdd, nil)
+    
+                    }else{
+                        closure( DetailVideoModel(), nil)
+                    }
+                }
+            }
+        }
+    
+        func RemoveMyAccount(userID:String,password:String,closure: @escaping (_ response: String, _ error: Error?) -> Void) {
+            let paramSend:[String: String] = ["password":password]
+            let linkUrl = "https://metatechvn.store/deleteuser/" + userID
+            requestRemoveAccount(linkUrl, param: paramSend, method: .POST, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var messageSend = ""
+                    if let temp = data2["message"] as? String {messageSend = temp}
+                    closure(messageSend,nil)
+                }else{
+                    if let data = data as? String{
+                        closure(data,nil)
+                    }
+                    closure("ERROR NO Message",nil)
+                }
+            }
+            // closure("Please Wait To Remove", nil)
+        }
+    
+        func postTokenNotification(token:String,userID:String,deviceName:String,closure: @escaping (_ response: String, _ error: Error?) -> Void) {
+            let paramSend:[String: String] = ["device_token":token,"id_user":userID,"device_name":deviceName]
+            requestRemoveAccount("https://metatechvn.store/add/token", param: paramSend, method: .POST, loading: true) { (data, error) in
+                if let data2 = data as? [String:Any]{
+                    var messageSend = ""
+                    if let temp = data2["message"] as? String {messageSend = temp}
+                    closure(messageSend,nil)
+                }else{
+                    if let data = data as? String{
+                        closure(data,nil)
+                    }
+                    closure("ERROR NO Message",nil)
+                }
+            }
+        }
+    }
+    
+    
+
 
 
 
