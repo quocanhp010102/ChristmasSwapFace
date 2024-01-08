@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-
+import AlamofireImage
 class MainSwapface2testViewController: UIViewController {
     @IBOutlet weak var collectionViewGood: UICollectionView!
     @IBOutlet weak var btnSearch: UIButton!
@@ -40,9 +40,9 @@ class MainSwapface2testViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if let url = URL(string: AppConstant.linkAvatar.asStringOrEmpty()){
-            avatarImage.af.setImage(withURL: url)
-        }
+//        if let url = URL(string: AppConstant.linkAvatar.asStringOrEmpty()){
+//            avatarImage.af.setImage(withURL: url)
+//        }
         let nameDevice = UIDevice.current.name
         if let userIDPro = AppConstant.userId , let tokenID = AppConstant.tokenID{
             APIService.shared.postTokenNotification(token: tokenID, userID: String(userIDPro), deviceName: nameDevice){repond , error in
@@ -70,6 +70,33 @@ class MainSwapface2testViewController: UIViewController {
         btnSearch.setTitle("", for: .normal)
         profile.setTitle("", for: UIControl.State.normal)
         self.username.text = String(AppConstant.userId!)
+        let url = URL(string: AppConstant.linkAvatar ?? "")
+        let processor = DownsamplingImageProcessor(size: self.avatarImage.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        self.avatarImage.kf.indicatorType = .activity
+        self.avatarImage.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "placeholderImage"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
+       // avatarImage.layoutIfNeeded()
+       // avatarImage=UIImageView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
+      
+       // avatarImage.layer.cornerRadius = avatarImage.frame.size.width / 2
+// avatarImage.clipsToBounds = true
 //        colecttiondanhmuc.register(UINib(nibName: "getlistimageclvCell", bundle: nil), forCellWithReuseIdentifier: "getlistimageclvCell")
 //        CollectViewListVD.register(UINib(nibName: "VideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VideoCollectionViewCell")
         collectionViewGood.register(UINib(nibName: VideoTemplateCLVCell.className, bundle: nil), forCellWithReuseIdentifier: VideoTemplateCLVCell.className)
@@ -208,4 +235,22 @@ extension MainSwapface2testViewController: UICollectionViewDelegateFlowLayout {
         
     }
 }
-
+extension UIImage {
+    // image with rounded corners
+    public func withRoundedCorners(radius: CGFloat? = nil) -> UIImage? {
+        let maxRadius = min(size.width, size.height) / 2
+        let cornerRadius: CGFloat
+        if let radius = radius, radius > 0 && radius <= maxRadius {
+            cornerRadius = radius
+        } else {
+            cornerRadius = maxRadius
+        }
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        let rect = CGRect(origin: .zero, size: size)
+        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+        draw(in: rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
